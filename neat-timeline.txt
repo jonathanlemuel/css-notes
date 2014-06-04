@@ -6,7 +6,7 @@
 
 1983 - DNS
 
-1989 - Proposal WWW - Tim Berners Lee
+1989 - Proposal WWW - Tim Berners-Lee
 
 1990 - WWW - Tim Berners Lee
 
@@ -36,7 +36,7 @@
 
 2003 - Safari/Webkit
 
-2004 - WHATWG
+2004 - WHATWG - Ian Hickson
 
 2004 - Mozilla Firefox
 

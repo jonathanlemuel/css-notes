@@ -58,3 +58,70 @@ html 4.01 1999
 
 2008 - chrome (using webkit)
 
+
+-----------------
+
+1960 - SGML - IBM
+
+1965 - Hypertext Idea
+
+1975-1990 - TCP/IP
+IP addresses
+networking computers
+
+1983 - DNS
+domain name server
+www.google.com -> 8.8.8.8
+
+1989 - Proposal WWW - Tim Berners-Lee
+
+1990 - WWW - Tim Berners Lee
+- HTML
+- HTTP (req/res headers / body)
+- Web server
+- Web browser
+
+1993 - NSCA Mosaic Browser
+
+Marc Andreessen
+<img src="">
+
+1994 - Netscape Navigator
+
+1994 - Cookies
+
+1994 - W3C
+
+1995 - Internet Explorer
+
+1995 - JavaScript - Brendan Eich
+
+1996 - CSS
+
+1996 - Jonathan's First Webpage :)
+
+1997 - Internet Explorer 4
+
+1998 - XML
+
+1999 - HTML 4.01
+
+2000 - XHTML madness
+<img src="cat.jpg" />
+
+2001 - CSS got a lot of attention
+
+2003 - Safari/Webkit
+
+2004 - WHATWG - Ian Hickson
+
+2004 - Mozilla Firefox
+
+2006 - Recognize XHTML failure
+
+2007 - iPhone & Mobile Safari
+
+2008 - Chrome
+
+
+
