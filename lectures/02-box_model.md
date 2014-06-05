@@ -1,5 +1,5 @@
 # Syntax
-````
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -16,7 +16,7 @@
   <body>
   </body>
 </html>
-````
+```
 
 # Selectors
 
@@ -81,7 +81,7 @@ HTML elements are all rectangles. We can specify their widths and heights explic
 - `margin`
 
 ### Example:
-```
+```css
 div {
   width: 100px;
   height: 100px;
@@ -96,7 +96,7 @@ would give us:
 ![content-padding-border-margin-example](./content-padding-border-margin.png)
 
 *`margin: 0 0 40px 0;` is a short-hand way of specifying the following:
-```
+```css
 margin-top: 0;
 margin-right: 0;
 margin-bottom: 40px;
@@ -111,7 +111,7 @@ Another short-hand way of specifying different measurements for each side is `ma
 
 Browsers implement some default css rules for different elements. For example, an `h1` tag may have some margin by default. However, different browsers might implement different defaults. It is highly recommended to clear out these defaults for all the elements you use in order to have the same output across all browsers. For example,
 
-```
+```css
   div {
     margin: 0;
     padding: 0;
@@ -133,7 +133,7 @@ The display property sets how an elements should be displayed. The most commonly
 
   - These are 5 divs. The black ones have `class="black"` and the green ones have `class="green"`. Notice how I don't specify a height. By default they grow vertically to the size of their contents, in this case 'hello', and they grow horizontally to the full width of their parent container, in this case `body`. Here's the CSS for this:
 
-  ```
+  ```css
     .black {
       background: black;
       color: white;
@@ -148,7 +148,7 @@ The display property sets how an elements should be displayed. The most commonly
   ```
   - I can also give them a specific width and height like so:
 
-  ```
+  ```css
     .black {
       background: black;
       color: white;
@@ -176,7 +176,7 @@ The display property sets how an elements should be displayed. The most commonly
 
 - `inline`: Meant to be used for elements that will be in-line, for example, words in paragraphs. Can't set height of these, but they can have a width and margin that will push everything on its same line away.
   - For example, a `strong` tag in a pragraph (`p` tag) is `inline`. i.e.:
-  ```
+  ```html
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
       eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
