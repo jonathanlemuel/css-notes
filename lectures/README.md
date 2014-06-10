@@ -1,6 +1,8 @@
 # Lectures
 
-- 01: History of the web
+- 01: [History of the web](./01-history.md)
+- 02: [Box Model](./02-box_model/README.md)
+
 
 # w5d2 - tuesday
 - history html
