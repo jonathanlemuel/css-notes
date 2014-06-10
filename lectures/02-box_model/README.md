@@ -11,7 +11,7 @@
       }
     </style>
     <!-- External stylesheet -->
-    <link rel="stylesheet" type="text/css" href="/path/to/css/file.css"
+    <link rel="stylesheet" type="text/css" href="/path/to/css/file.css">
   </head>
   <body>
   </body>
