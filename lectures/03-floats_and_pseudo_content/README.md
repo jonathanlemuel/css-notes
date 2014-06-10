@@ -131,7 +131,7 @@ all in one container like this:
 </body>
 ```
 
-![overgrown content](./overgrown-content.png)
+![stunted container](./stunted-container.png)
 
 AH!! What happened?? The pictures look like they're displayed the way we want,
 but the `.pics` container, that has the green border and should be
