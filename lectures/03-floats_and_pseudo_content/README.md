@@ -18,7 +18,7 @@ content that is already inside of it.
 
 ```css
 h1:after {
-  content: ☺;
+  content: "☺";
   display: block;
   color: red;
 }
