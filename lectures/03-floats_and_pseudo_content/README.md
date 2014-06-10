@@ -53,10 +53,14 @@ From this:
     padding: 20px 10px ;
   }
 ```
-we'd get this: ![stacked pictures](./stacked-pics.png)
+we'd get this:
+
+![stacked pictures](./stacked-pics.png)
 
 
-Then, we can apply `float: left;` to get this: ![floated-pics](./floated-pics.png)
+Then, we can apply `float: left;` to get this:
+
+![floated-pics](./floated-pics.png)
 
 Now, the three pictures fit nicely next to each other. But what happens if the container can't fit them all on the same horizontal line? Check it out:
 
