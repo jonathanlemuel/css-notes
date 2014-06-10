@@ -81,6 +81,7 @@ HTML elements are all rectangles. We can specify their widths and heights explic
 - `margin`
 
 ### Example:
+
 ```css
 div {
   width: 100px;
@@ -96,6 +97,7 @@ would give us:
 ![content-padding-border-margin-example](./content-padding-border-margin.png)
 
 *`margin: 0 0 40px 0;` is a short-hand way of specifying the following:
+
 ```css
 margin-top: 0;
 margin-right: 0;
@@ -146,6 +148,7 @@ The display property sets how an elements should be displayed. The most commonly
       margin: 1px;
     }
   ```
+
   - I can also give them a specific width and height like so:
 
   ```css
@@ -165,7 +168,10 @@ The display property sets how an elements should be displayed. The most commonly
       height: 30px;
     }
   ```
-  which will give us ![width-and-height](./width-and-height.png)
+
+  which will give us:
+
+  ![width-and-height](./width-and-height.png)
 
   - However, if the content grows to a height larger than the height we set on its container, it will simply overflow (and look like crap), like this:
     ![Overflowing content](./overgrown-content.png)
@@ -176,6 +182,7 @@ The display property sets how an elements should be displayed. The most commonly
 
 - `inline`: Meant to be used for elements that will be in-line, for example, words in paragraphs. Can't set height of these, but they can have a width and margin that will push everything on its same line away.
   - For example, a `strong` tag in a pragraph (`p` tag) is `inline`. i.e.:
+
   ```html
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -186,7 +193,9 @@ The display property sets how an elements should be displayed. The most commonly
       nulla pariatur.
     </p>
   ```
+
   - If we give the `strong` tag some width and padding (all-around padding), it will just push the words on its same line away, but it will not push the words above or below it. Take a look:
+
     ![inline](./inline.png)
 
 # Chrome's CSS inspector
