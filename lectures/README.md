@@ -2,7 +2,8 @@
 
 - 01: [History of the web](./01-history.md)
 - 02: [Box Model](./02-box_model/README.md)
-
+- 03: [Floats and Pseudo Content](./03-floats_and_pseudo_content/README.md)
+- 04: [Navigation Bar (demo)](./04-nav_bar/README.md)
 
 # w5d2 - tuesday
 - history html
