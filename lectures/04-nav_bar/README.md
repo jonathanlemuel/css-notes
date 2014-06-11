@@ -200,6 +200,7 @@ a:hover {
   text-decoration: underline;
   background: darkred;
 }
+```
 
 ![smaller link](./smaller-link.png)
 
