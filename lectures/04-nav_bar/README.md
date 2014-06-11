@@ -236,7 +236,7 @@ li {
 Much, much nicer! And now I can click anywhere within the borders to follow
 the link.
 
-## `main`
+## `main` Content
 
 Let's prettify this. This should be easy for you by now:
 
