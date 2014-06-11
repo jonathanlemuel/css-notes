@@ -156,9 +156,12 @@ Looks good, but the `nav` element is expanding to the full width of the `header`
 We want it to center horizontally. We do this by giving it a specific width and
 setting its horizontal `margin` to `auto`. The specific width makes sense
 because if not, it'll just expand to the width of its parent, so there won't
-be any centering. `margin: 0 auto;` says it should have 0 margin on the top
-and bottom and `auto` margin on the left and right sides. `auto` only works for
-centering an element horizontally, not vertically.
+be any margin on either side for it to center. `margin: 0 auto;` says it should
+have 0 margin on the top and bottom and `auto` margin on the left and right
+sides, which will just split up whatever space there is into the left and right
+margins.
+
+NB: `auto` only works for centering an element horizontally, not vertically.
 
 ```css
 nav {
@@ -185,9 +188,10 @@ li {
 ![nav borders](./nav-borders.png)
 
 The whole `nav` is contained by the left and right-most white borders. We
-also put a border on the left side of each `li`. NB: We didn't have to put a
-border on the right side of the last `li` because it's already bordered by
-the right border on the `nav`. #twobirdsoneborder
+also put a border on the left side of each `li`.
+
+NB: We didn't have to put a border on the right side of the last `li` because
+it's already bordered by the right border on the `nav`. #twobirdsoneborder
 
 ### User feedback - `a:hover`
 
