@@ -17,7 +17,7 @@ First, take a look at the HTML and then I'll explain why I picked these tags.
   <header>
 
     <nav class="group">
-      <h1 class="logo">
+      <h1>
         App Academy
       </h1>
 
@@ -130,7 +130,7 @@ Let's remove the bullets for the `li`s and give them a little padding so
 they're not so clumped up. And `color: white;`
 
 ```css
-.logo {
+h1 {
   color: white;
 }
 
