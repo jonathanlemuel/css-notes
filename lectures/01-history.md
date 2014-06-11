@@ -20,12 +20,16 @@
 [oldest_webpage]: http://www.ibiblio.org/pjones/old.page.html
 
 
-1993 - NSCA Mosaic Browser ![mosaic][mosaic]
-[mosaic]: http://en.wikipedia.org/wiki/File:NCSA_Mosaic.PNG
+1993 - NSCA Mosaic Browser
+
+![mosaic][mosaic]
+[mosaic]: http://upload.wikimedia.org/wikipedia/en/b/b7/NCSA_Mosaic.PNG
 
 
-1994 - Netscape Navigator ![netscape][netscape]
-[netscape]: http://en.wikipedia.org/wiki/File:Navigator_1-22.png
+1994 - Netscape Navigator
+
+![netscape][netscape]
+[netscape]: http://upload.wikimedia.org/wikipedia/en/c/c9/Navigator_1-22.png
 
 
 1994 - Cookies
