@@ -31,31 +31,27 @@
 # w6d1 - monday
 ## tommy gone
 - positioning
-- cat glasses demo
 
 
 # w6d2 - tuesday
-- make a page with posts demo
-
+- cat glasses demo
 
 # w6d3 - wednesday
 ## some jquery selector skills needed for project
-- cat click refresher demo
+- navigation bar demo
+- make a page with posts demo
 
 
 # w6d4 - thursday
 ##  css and jquery needed for project for project
-- toggle demo
-- modal demo
-
+- toggle demo (morning)
+- cat click demo (event delegation) (morning)
 
 # w6d5 - friday
-- tag demo
-
+- jquery ajax demo
 
 # w7d1 - monday
-- navigation bar demo
-
+- tag demo (morning)
 
 # w7d2 - tuesday
 - form demo
@@ -64,7 +60,8 @@
 - table demo
 
 # w7d4 - thursday
-# backbone miniproject sf
+# backbone miniproject sf (twilio)
+- modal demo
 - sprite demo
 
 # w7d5 - friday
