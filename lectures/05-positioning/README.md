@@ -15,7 +15,6 @@ appear in its default place in the document flow. Cannot be 'nudged'
 somewhere else.
 
 ## `position: relative;`
-- Creates a new coordinate system for children that are "absolute"
 
 These behave just like `static` elements by default. It takes up the same space
 on the document and shows up in the same spot as if it were static, however,
