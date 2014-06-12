@@ -175,7 +175,7 @@ they remain `fixed` in place. They DO NOT move with the rest of the page when
 you scroll. Like `absolute`, by default it shows up where it normally would in
 the document flow, and it also does not take up space (lifted out). Other
 elements will go behind it. Offset coordinates (nudging) are relative to the
-window viewport (not the document). Watch out! Because you can place it fixed
+window viewport (not the document). Watch out! Because you can nudge it
 outside of the window, never to be seen again!
 
 ## `z-index`
