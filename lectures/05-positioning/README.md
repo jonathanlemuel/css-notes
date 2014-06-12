@@ -164,9 +164,9 @@ So how do we put it where we want it to be? We'll have to put it inside a non-st
 Perfect! That's what we wanted. You may be thinking, "that's stupid, I can just
 make the green div `position: relative;` and nudge it without setting up a
 stupid container!", and you'd be right. This isn't the best example, but it
-shows you the theory. In real life, you'd use this when you want some element
-to be positioned relative to it's container, not relative to something else on
-the page. We'll do a demo showing when this becomes (very) useful.
+shows you the theory. In real life, you'd use this when you want the `absolute`
+element to be positioned relative to it's container, not relative to something
+else on the page. We'll do a demo showing when this becomes (very) useful.
 
 ## `position: fixed;`
 
