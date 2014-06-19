@@ -7,6 +7,7 @@
 - 05: [Positioning & Document Flow](./05-positioning/README.md)
 - 06: [Layout](./06-layout/README.md)
 - 07: [Dropdown](./07-drop_down/README.md)
+- 08: [Binary State Display Toggle](./08-binary_toggle/README.md)
 
 # w5d2 - tuesday
 - history html
