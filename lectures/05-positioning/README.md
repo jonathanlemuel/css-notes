@@ -230,3 +230,7 @@ number to put it behind the document.
 
 NB: Nesting DOES matter. If you put an element with `z-index: 100;` nested in
 another element of `z-index: -100;`, it will not show up on top of everything because its parent is still be behind everything.
+
+
+Check out the [file][file] I've been using for the screen shots! Feel free to play around with it yourself. Learn by doing!
+[file]: ./boxes-positioning.html
