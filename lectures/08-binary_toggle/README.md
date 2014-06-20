@@ -100,11 +100,13 @@ Pretty awesome, huh?
 ## Combine them, you can
 
 ```css
-.button-container.is-friend .friend, .button-container .friend {
+.button-container.is-friend .friend, 
+.button-container .friend {
   display: block
 }
 
-.button-container .friend, .button-container.is-friend .friend {
+.button-container .friend, 
+.button-container.is-friend .friend {
   display: none
 }
 ```
