@@ -9,3 +9,4 @@
 - 07: [Dropdown](./07-drop_down/README.md)
 - 08: [Binary State Display Toggle](./08-binary_toggle/README.md)
 - 09: [Positioning Demo: Cat with Glasses](./09-positioning_demo/README.md)
+- 10: [Picture Tagging Demo: Cats on Cats](./10-picture_tagging/README.md)
