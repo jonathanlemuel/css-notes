@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Form</title>
+  <style>
+
+  html, body, form, h1, div, label {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="submit"],
+  button {
+    display: inline-block;
+    -webkit-appearance: none;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    color: inherit;
+    background: transparent;
+    box-sizing: content-box;
+  }
+
+  input[type="submit"],
+  button {
+    display: inline;
+    cursor: pointer;
+  }
+
+  body {
+    font-family: sans-serif;
+    background: #ddd;
+    color: #000;
+    padding: 100px;
+  }
+
+  .sign-in {
+    background: #fff;
+    width: 300px;
+    padding: 50px;
+    margin: auto;
+    border-radius: 5px;
+  }
+
+  .sign-in h1 {
+    font-size: 60px;
+    font-weight: bold;
+  }
+
+  .input {
+    margin: 20px 0;
+  }
+
+  .input > label {
+    display: block;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+  }
+
+  .input > input {
+    border: 3px solid #000;
+    padding: 5px;
+    width: 284px;
+    border-radius: 5px;
+  }
+
+  .input > input:focus {
+    border-color: #0c0;
+  }
+
+  .submit {
+
+  }
+
+  .submit > input[type="submit"] {
+    position: relative;
+    background: #0c0;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 0 #0a0;
+  }
+
+  .submit > input[type="submit"]:hover {
+    background: #0b0;
+    box-shadow: 0 3px 0 0 #090;
+  }
+
+  .submit > input[type="submit"]:active {
+    background: #0a0;
+    top: 3px;
+    box-shadow: none;
+  }
+
+
+  /*
+
+  DIFFERENT WAYS OF CALCULATING BOXES DEMO
+
+  */
+
+  /*
+
+  .box {
+    margin: 30px;
+    border: 5px solid blue;
+    padding: 30px;
+    width: 100px;
+    background: red;
+  }
+
+  .border-box {
+    box-sizing: border-box;
+  }
+
+  .content-box {
+    box-sizing: content-box;
+  }
+
+  */
+
+
+
+  </style>
+</head>
+<body>
+
+  <!--
+
+    <div class="content-box box">CONTENT BOX HELLO</div>
+
+    <div class="border-box box">BORDER BOX HELLO</div>
+
+  -->
+
+  <form class="sign-in">
+
+    <h1>Welcome</h1>
+
+    <div class="input">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" value="">
+    </div>
+
+    <div class="input">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" value="">
+    </div>
+
+    <div class="submit">
+      <!-- <button>Sign In</button> -->
+      <input type="submit" value="Sign In">
+    </div>
+
+  </form>
+
+</body>
+</html>

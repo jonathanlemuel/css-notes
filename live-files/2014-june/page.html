@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+  /* RESET */
+
+  html, body, header, main, footer, nav, h1, a, ul, li, section, p, small {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  /* UTILITIES */
+
+  .group:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  /* MAIN STYLE */
+
+  body {
+    font-family: sans-serif;
+    background: #eee;
+    color: #333;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .header {
+    background: #f00;
+    border-bottom: 3px solid #333;
+  }
+
+  .header > nav {
+    width: 900px;
+    margin: auto;
+    border-left: 3px solid #333;
+    border-right: 3px solid #333;
+  }
+
+  .header-logo {
+    float: left;
+  }
+
+  .header-logo > a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .header-logo > a:hover {
+    background: #333;
+  }
+
+  .header-ul {
+    float: right;
+  }
+
+  .header-ul > li {
+    float: left;
+    border-left: 3px solid #333;
+  }
+
+  .header-ul > li > a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+  }
+
+  .header-ul > li > a:hover {
+    background: #333;
+  }
+
+  .main {
+    margin: auto;
+    width: 870px;
+    background: #fff;
+    padding: 15px;
+    border-left: 3px solid #ccc;
+    border-right: 3px solid #ccc;
+  }
+
+  .main-sidebar {
+    float: left;
+    width: 300px;
+    padding: 0 15px 0 0;
+    border-right: 3px solid #ccc;
+  }
+
+  .main-content {
+    float: right;
+    width: 535px;
+  }
+
+  .main h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 0 15px;
+  }
+
+  .main p {
+
+  }
+
+  .footer {
+    margin: auto;
+    width: 870px;
+    background: #ddd;
+    border: 3px solid #ccc;
+    padding: 15px;
+    color: #999;
+  }
+
+  .footer > small {
+    float: left;
+  }
+
+  .footer > ul {
+    float: right;
+  }
+
+  .footer > ul > li {
+    float: left;
+    padding: 0 0 0 15px;
+  }
+
+  .footer > ul > li > a {
+    display: block;
+    color: #999;
+  }
+
+  .footer > ul > li > a:hover {
+    color: #333;
+  }
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="group">
+      <h1 class="header-logo">
+        <a href="#">App Academy Fun</a>
+      </h1>
+
+      <ul class="header-ul group">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Notifications</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main group">
+    <section class="main-sidebar">
+      <h1>Sidebar</h1>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    </section>
+    <section class="main-content">
+      <h1>Content</h1>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    </section>
+  </main>
+
+  <footer class="footer group">
+    <small>&copy; 2014 App Academy</small>
+
+    <ul class="group">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

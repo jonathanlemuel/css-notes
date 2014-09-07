@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+  html, body, figure, figcaption, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  body {
+    font-family: sans-serif;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .photo {
+    position: relative;
+
+    margin: 100px auto;
+    border: 10px solid black;
+    width: 700px;
+
+    cursor: crosshair;
+  }
+
+  .tag {
+    display: none;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    margin-top: -50px;
+    margin-left: -50px;
+
+    width: 90px;
+    height: 90px;
+    border: 5px solid blue;
+    background: transparent;
+  }
+
+  .is-tagged > .tag {
+    display: block;
+  }
+
+
+  </style>
+</head>
+<body>
+
+  <figure class="photo">
+    <div class="tag"></div>
+    <img src="cats.jpg" alt="Cats">
+  </figure>
+
+<script src="jquery.js"></script>
+<script>
+
+$(document).ready(function(){
+
+  $(".photo").on("click", function(event){
+
+    event.preventDefault();
+    console.log("event", event);
+
+    var $photo = $(event.currentTarget);
+    var $tag = $photo.find(".tag");
+
+    var x = ((event.pageX - $photo.offset().left) / $photo.outerWidth()) * 100;
+    var y = ((event.pageY - $photo.offset().top) / $photo.outerHeight()) * 100;
+
+    console.log(x, y);
+
+    $photo.addClass("is-tagged");
+
+    $tag.css({
+      "top": y + "%",
+      "left": x + "%"
+    });
+
+  });
+});
+
+</script>
+</body>
+</html>

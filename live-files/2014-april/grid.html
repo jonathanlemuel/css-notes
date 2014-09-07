@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+  html, body, nav, h1, h2 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  nav {
+    background: red;
+    border: 10px solid purple;
+  }
+
+  h1 {
+    background: yellow;
+    width: 200px;
+    height: 200px;
+
+    float: left;
+  }
+
+  h2 {
+    background: green;
+    width: 200px;
+    height: 200px;
+
+    float: right;
+  }
+
+  .clear {
+    display: block;
+    clear: both;
+  }
+
+
+  /* floated elements do not cause parent height to grow */
+
+
+
+  .group {
+
+  }
+
+  .group:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  </style>
+</head>
+<body>
+
+  <nav class="group">
+    <h1>HELLO</h1>
+    <h2>GOODBYE</h2>
+
+  </nav>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+  html, body, header, h1, p, div, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    font-family: sans-serif;
+    position: relative;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+  }
+
+  li:nth-child(1) {
+    bottom: 300px;
+    left: 400px;
+    background: yellow;
+  }
+
+  li:nth-child(2) {
+    bottom: 100px;
+    left: 100px;
+    background: green;
+  }
+
+  li:nth-child(3) {
+    bottom: 200px;
+    left: 600px;
+    background: blue;
+  }
+
+  li:nth-child(4) {
+    bottom: 500px;
+    left: 200px;
+    background: red;
+  }
+
+  div {
+    position: relative;
+    margin: 50px auto;
+    max-width: 600px;
+    height: 200%;
+  }
+
+  header {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    width: 600px;
+    margin-left: -300px;
+    z-index: 1;
+  }
+
+  h1 {
+    font-size: 80px;
+    font-weight: bold;
+  }
+
+  p {
+    padding: 20px 0;
+  }
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+
+    <h1>Kickstarter</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  </header>
+
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+  <div></div>
+
+<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+<script>
+
+$(document).ready(function(){
+
+  $(document).on("scroll", function(event){
+
+    var offset = $(window).scrollTop();
+    var height = $(document).height();
+    var percentage = offset / height;
+
+    $("li").css({
+      "-webkit-transform": "rotate(" + (360 * percentage) + "deg)"
+    });
+
+  });
+
+});
+
+</script>
+</body>
+</html>

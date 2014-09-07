@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Webfonts</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,700' rel='stylesheet' type='text/css'>
+  <style>
+
+  html, body, h1, ul, li, img, p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    box-sizing: border-box;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .group:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+  }
+
+  h1 {
+    margin: 20px auto;
+    padding: 0 20px;
+
+    max-width: 800px;
+    width: 100%;
+
+    font-size: 100px;
+    text-align: center;
+    font-weight: 100;
+    line-height: 1.1;
+  }
+
+  @media (max-width: 700px) {
+
+    h1 {
+      font-size: 80px;
+    }
+
+  }
+
+  @media (max-width: 600px) {
+
+    h1 {
+      font-size: 60px;
+    }
+
+  }
+
+  @media (max-width: 400px) {
+
+    h1 {
+      font-size: 40px;
+    }
+
+  }
+
+  ul {
+    margin: 20px auto;
+    padding: 0 20px;
+    max-width: 800px;
+    width: 100%;
+  }
+
+  li {
+    float: left;
+    width: 25%;
+  }
+
+  @media (max-width: 700px) {
+
+    li {
+      width: 33.333%;
+    }
+
+    li:last-child {
+      display: none;
+    }
+
+  }
+
+  @media (max-width: 600px) {
+
+    li {
+      width: 50%;
+    }
+
+    li:nth-child(1),
+    li:nth-child(4) {
+      display: none;
+    }
+
+  }
+
+  @media (max-width: 400px) {
+
+    li {
+      display: none;
+      width: 100%;
+    }
+
+    li:nth-child(1) {
+      display: block;
+    }
+
+  }
+
+  p {
+    margin: 20px auto;
+    padding: 0 20px;
+    max-width: 700px;
+    width: 100%;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  </style>
+</head>
+<body>
+
+  <h1>I really love webfonts. They make me happy!</h1>
+
+  <ul class="group">
+    <li><img src="cat.jpg" alt="Cat"></li>
+    <li><img src="cat.jpg" alt="Cat"></li>
+    <li><img src="cat.jpg" alt="Cat"></li>
+    <li><img src="cat.jpg" alt="Cat"></li>
+  </ul>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+</body>
+</html>

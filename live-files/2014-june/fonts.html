@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Webfonts</title>
+  <!--
+
+    See this page for the Roboto typeface using the Google Font API:
+    http://www.google.com/fonts#QuickUsePlace:quickUse/Family:Roboto
+
+  -->
+  <link href="http://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet" type="text/css">
+  <style>
+
+  html, body, h1, p, ul, li, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  .group:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    background: white;
+  }
+
+  h1 {
+    margin: 20px auto;
+    padding: 0 20px 20px 20px;
+    max-width: 800px;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 100;
+    line-height: 1.1;
+  }
+
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 60px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  p {
+    margin: 20px auto;
+    padding: 0 20px;
+    max-width: 600px;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  ul {
+    margin: auto;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+
+  li {
+    float: left;
+    width: 25%;
+  }
+
+  @media (max-width: 700px) {
+
+    /* Show three images, hide last one. */
+
+    li {
+      width: 33.3333%;
+    }
+
+    li:nth-child(4) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+
+    /* Show two images, hide last two. */
+
+    li {
+      width: 50%;
+    }
+
+    li:nth-child(3),
+    li:nth-child(4) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 400px) {
+
+    /* Only show one image, hide all others. */
+
+    li {
+      display: none;
+      width: 100%;
+    }
+
+    li:nth-child(1) {
+      display: block;
+    }
+  }
+
+  </style>
+</head>
+<body>
+
+  <h1>I really love webfonts. They make me happy.</h1>
+
+  <ul class="group">
+    <li><img src="cat.jpg" alt="Cat"></li>
+    <li><img src="cat.jpg" alt="Cat"></li>
+    <li><img src="cat.jpg" alt="Cat"></li>
+    <li><img src="cat.jpg" alt="Cat"></li>
+  </ul>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+</body>
+</html>

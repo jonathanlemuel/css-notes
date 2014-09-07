@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Pseudo Content</title>
+  <style>
+
+  html, body, article, h1, p, a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  body {
+    /* Use sans-serif fonts. */
+    font-family: sans-serif;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 60px;
+  }
+
+  a {
+    color: red;
+  }
+
+  a:after {
+    /* Psuedo content inserts inline content that can be styled. */
+    content: " ↳";
+
+    /* You can style this inline element like any other element. */
+    background: yellow;
+  }
+
+  </style>
+</head>
+<body>
+
+  <article>
+
+    <h1>Cats</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris <a href="#">this is a fancy link</a> ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  </article>
+
+</body>
+</html>

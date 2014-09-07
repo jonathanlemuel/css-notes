@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+  html, body, div, strong {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  body {
+    padding: 200px;
+    text-align: center;
+    font-family: sans-serif;
+  }
+
+  /* DEFAULT STATES */
+
+  .machine-on {
+    display: none;
+  }
+
+  .machine-off {
+    display: block;
+  }
+
+  /* MODIFIED STATES */
+
+  .is-on .machine-on {
+    display: block;
+  }
+
+  .is-on .machine-off {
+    display: none;
+  }
+
+  </style>
+</head>
+<body>
+
+<div class="machine">
+
+  <div class="machine-on">
+    <strong>Machine is ON :)</strong><br>
+    <button>TURN IT OFF</button>
+  </div>
+
+  <div class="machine-off">
+    <strong>Machine is OFF :(</strong><br>
+    <button>TURN IT ON</button>
+  </div>
+
+</div>
+
+
+<script src="jquery.js"></script>
+<script>
+
+$(document).ready(function(){
+
+  $(".machine").on("click", "button", function(event){
+
+    event.preventDefault();
+
+    var $button = $(event.currentTarget);
+    var $scope = $button.closest("div");
+    // console.log($scope);
+
+    if($scope.is(".machine-on")){
+      $(".machine").removeClass("is-on");
+    } else {
+      $(".machine").addClass("is-on");
+    }
+
+  });
+
+});
+
+</script>
+</body>
+</html>

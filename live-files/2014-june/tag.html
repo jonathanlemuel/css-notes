@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+  html, body, h1, figure, div, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  body {
+    font-family: sans-serif;
+  }
+
+  h1 {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+  }
+
+  figure {
+    position: relative;
+    width: 800px;
+    margin: auto;
+    border: 10px solid black;
+    cursor: crosshair;
+  }
+
+  .tag {
+    display: none;
+    width: 90px;
+    height: 90px;
+    border: 5px solid blue;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    margin-top: -50px;
+    margin-left: -50px;
+  }
+
+  .is-tagged .tag {
+    display: block;
+  }
+
+  </style>
+</head>
+<body>
+
+  <h1>Tag A Cat</h1>
+
+  <figure id="figure">
+    <div class="tag"></div>
+    <img src="cats.jpg" alt="Cats">
+  </figure>
+
+  <script src="jquery.js" charset="utf-8"></script>
+  <script>
+  $(document).ready(function(){
+
+    $("#figure").on("click", function(event){
+
+      var $figure = $(this);
+      var $tag = $figure.find(".tag");
+
+      console.log("event", event);
+      console.log("$figure", $figure);
+
+      var x = ((event.pageX - $figure.offset().left) / $figure.outerWidth()) * 100;
+      var y = ((event.pageY - $figure.offset().top) / $figure.outerHeight()) * 100;
+
+      console.log(x, y);
+
+      $tag.css({
+        top: y + "%",
+        left: x + "%"
+      });
+
+      $figure.addClass("is-tagged");
+
+    });
+  });
+
+  </script>
+
+</body>
+</html>

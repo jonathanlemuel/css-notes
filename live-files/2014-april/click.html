@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+
+  html, body, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .group:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  body {
+    color: black;
+    background: white;
+    font-family: sans-serif;
+  }
+
+  .grid {
+    margin: 100px auto;
+    border: 5px solid black;
+    background: url("cat.jpg");
+    background-size: cover;
+    width: 300px;
+  }
+
+  .grid > li {
+    width: 90px;
+    height: 90px;
+    border: 5px solid black;
+    background: gray;
+    float: left;
+    cursor: pointer;
+  }
+
+  .grid > .cleared {
+    background: transparent;
+  }
+
+  .grid > li:hover {
+    background: yellow;
+  }
+
+
+
+
+  </style>
+
+
+</head>
+<body>
+
+  <ul id="wow" class="grid group">
+    <li></li>
+    <li></li>
+    <li></li>
+
+    <li></li>
+    <li></li>
+    <li></li>
+
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+  <a href="http://www.google.com">Google</a>
+
+
+
+  <script src="jquery.js"></script>
+  <script>
+
+
+  function addLi(){
+
+    $("ul").append("<li></li>");
+
+  };
+
+  function bindClick(){
+    $("ul").on("click", "li", function(event){
+
+      console.log("FIRED", event.currentTarget);
+
+      var $li = $(this);
+
+      $li.toggleClass("cleared");
+
+    });
+  }
+
+  $(document).ready(function(){
+
+    bindClick();
+
+    $("a").on("click", function(){
+
+      event.preventDefault();
+
+      $(this).css({"font-size": "300px"});
+
+    });
+
+  });
+
+
+  </script>
+</body>
+</html>

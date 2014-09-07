@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sign In</title>
+  <style>
+
+  html, body, form, h1, div, label {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="submit"] {
+    -webkit-appearance: none;
+    box-sizing: content-box;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    vertical-align: baseline;
+    width: auto;
+    background: transparent;
+    color: inherit;
+  }
+
+  input[type="submit"] {
+    display: inline;
+    cursor: pointer;
+  }
+
+  body {
+    padding: 100px;
+    background: #ddd;
+    font-family: sans-serif;
+  }
+
+  form {
+    background: #fff;
+    padding: 50px;
+    width: 300px;
+    margin: auto;
+    border-radius: 5px;
+  }
+
+  h1 {
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1.0;
+  }
+
+  .input {
+    margin: 20px 0;
+  }
+
+  .input > label {
+    display: block;
+    font-weight: bold;
+  }
+
+  .input > input {
+    border: 3px solid #000;
+    padding: 5px;
+    width: 284px;
+    border-radius: 5px;
+  }
+
+  .input > input:focus {
+    border-color: #0c0;
+  }
+
+  .submit > input {
+    position: relative;
+    display: inline-block;
+    background: #0c0;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 3px 0 0 #070;
+  }
+
+  .submit > input:hover {
+    background: #0b0;
+  }
+
+  .submit > input:active {
+    top: 3px;
+    box-shadow: none;
+    background: #0a0;
+  }
+
+  </style>
+</head>
+<body>
+
+  <form>
+
+    <h1>Welcome</h1>
+
+    <div class="input">
+      <label for="user-email">Email</label>
+      <input type="email" id="user-email" name="user[email]" value="">
+    </div>
+
+    <div class="input">
+      <label for="user-password">Password</label>
+      <input type="password" id="user-password" name="user[password]" value="">
+    </div>
+
+    <div class="submit">
+      <input type="submit" value="Sign In">
+    </div>
+
+  </form>
+
+</body>
+</html>

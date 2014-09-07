@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cat Clicker!</title>
+  <style>
+
+  /* RESET */
+
+  html,
+  body,
+  h1,
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  /* UTILS */
+
+  .group:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  /* STYLES */
+
+  body {
+    font-family: sans-serif;
+  }
+
+  h1 {
+    margin: 50px 0;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  ul {
+    margin: 50px auto;
+    border: 5px solid black;
+    width: 300px;
+    background: url("cat.jpg");
+    background-size: cover;
+  }
+
+  li {
+    float: left;
+    width: 90px;
+    height: 90px;
+    background: gray;
+    border: 5px solid black;
+    cursor: pointer;
+  }
+
+  .cleared {
+    background: transparent;
+  }
+
+  li:hover {
+    background: yellow;
+  }
+
+  </style>
+</head>
+<body>
+
+  <h1>Cat Clicker!</h1>
+
+  <ul class="group">
+
+    <li></li>
+    <li></li>
+    <li></li>
+
+    <li></li>
+    <li></li>
+    <li></li>
+
+    <li></li>
+    <li></li>
+    <li></li>
+
+  </ul>
+
+
+  <script src="jquery.js"></script>
+  <script>
+
+  function addRows(){
+
+    var html = "<li></li><li></li><li></li>";
+
+    $("ul").append(html);
+
+    listenToClicks();
+
+  };
+
+
+  $(document).ready(function(){
+
+    // $("li").on("click", function(event){
+    //
+    //   console.log("event bound!!", this)
+    //
+    //   // console.log("event --> ", event);
+    //
+    //   // console.log("currentTarget -->", event.currentTarget);
+    //   //
+    //   // console.log("this -->", this);
+    //   //
+    //   // console.log("this == event.currentTarget --->", this == event.currentTarget);
+    //
+    //   // var li = event.currentTarget;
+    //   // var $li = $(li);
+    //   //
+    //   // var $li = $(event.currentTarget);
+    //
+    //   var $li = $(this);
+    //
+    //   $li.toggleClass("cleared");
+    //
+    // });
+
+    $("ul").on("click", "li", function(event){
+
+      console.log("ul clicked!");
+
+      console.log("currentTarget -->", event.currentTarget);
+
+      console.log("target -->", event.target);
+
+      var $li = $(this);
+
+      $li.toggleClass("cleared");
+
+    });
+
+  });
+
+  </script>
+</body>
+</html>

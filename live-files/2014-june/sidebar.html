@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sidebar</title>
+  <style>
+
+  /* RESET */
+
+  html, body, nav, main, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  /* THE IMPORTANT SIDEBAR STUFF */
+
+  html, body {
+    /* We size the height to fill the viewport. Html and body elements behave like regular block elements by default and only grow vertically to fit content. We override this, stretching them out to fill the viewport. */
+    height: 100%;
+
+    /* Want a coordinate system for absolute elements. */
+    position: relative;
+
+    /* No scrollbars or overflow desired */
+    overflow: hidden;
+  }
+
+  .sidebar {
+    background: lightblue;
+
+    /* Sidebar is positioned absolute to not take up space in document flow. */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+
+    /* Size it to the full height of the parent container (body) */
+    height: 100%;
+
+    /* Should be behind the push container */
+    z-index: 1;
+  }
+
+  .push {
+    /* Relative positioning lets us move it over, as well as stack it using z-index. */
+    position: relative;
+
+    /* Default no nudging. */
+    left: 0;
+
+    /* Container has to be full width and height of body element, which is the same size as viewport. */
+    width: 100%;
+    height: 100%;
+
+    /* We don't want scroll bars or content sticking out. */
+    overflow: hidden;
+
+    /* Stack push container on top of sidebar. Push needs to be front most. */
+    z-index: 2;
+
+    /* It needs a background color, else you will see the sidebar behind it. */
+    background: white;
+
+    /* The magic of making it slide. */
+    transition: left 0.5s;
+
+    /* Fancy shadow to show depth if desired. */
+    box-shadow: -10px 0 20px rgba(0,0,0,0.2);
+  }
+
+  .open-menu .push {
+    /* Move the push container over, revealing the sidebar. */
+    left: 200px;
+  }
+
+  .open-menu .push:after {
+    /* We want a big container covering over all the push container. Psuedo-content is the solution */
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* Make it the full size of the push container */
+    width: 100%;
+    height: 100%;
+
+    /* White-out the content a little if desired. */
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  .main {
+    /* Main will hold the actual content. Grow it to be the full size of parent container. */
+    height: 100%;
+    width: 100%;
+
+    /* Actual content in main can be long, we need scrollbars if it does not fit. This is the actual scrollbar we use. */
+    overflow: auto;
+  }
+
+  /* MAKING IT PRETTY */
+
+  body {
+    font-family: sans-serif;
+    background: white;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  h1, li, p {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  </style>
+</head>
+<body>
+
+  <nav class="sidebar">
+    <h1>Nav</h1>
+    <ul>
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+    </ul>
+  </nav>
+
+  <div class="push">
+    <main class="main">
+
+      <button>Hamburger</button>
+
+      <h1>Content</h1>
+
+      <p>Lorem <a href="#">ipsum</a> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    </main>
+  </div>
+
+
+
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function(){
+
+  $("button").on("click", function(event){
+    $("body").toggleClass("open-menu");
+  });
+
+  $(".push").on("click", function(event){
+
+    if($(event.target).is(".push")){
+      $("body").removeClass("open-menu");
+    }
+
+  });
+});
+</script>
+</body>
+</html>

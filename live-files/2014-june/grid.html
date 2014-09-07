@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+  html, body, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  ul {
+    display: block;
+    margin: 100px auto 100px auto;
+    width: 300px;
+    background: yellow;
+    border: 5px solid black;
+  }
+
+  li {
+    display: block;
+    float: left;
+    list-style: none;
+    width: 90px;
+    height: 90px;
+    background: gray;
+    border: 5px solid black;
+  }
+
+  li:hover {
+    background: transparent;
+  }
+
+  .group:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .x {
+    background: orange;
+  }
+
+  .x:after {
+    content: "x";
+    font-size: 100px;
+    font-family: sans-serif;
+    text-align: center;
+    display: block;
+    line-height: 0.75;
+  }
+
+  </style>
+</head>
+<body>
+
+  <ul class="group">
+
+    <li class="x"></li>
+    <li></li>
+    <li></li>
+
+    <li></li>
+    <li></li>
+    <li class="x"></li>
+
+    <li></li>
+    <li></li>
+    <li></li>
+
+  </ul>
+
+
+</body>
+</html>

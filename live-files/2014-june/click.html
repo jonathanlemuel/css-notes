@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Click A Cat!</title>
+  <style>
+
+  html, body, div, ul, li, h1 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .group:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  body {
+    text-align: center;
+    font-family: sans-serif;
+  }
+
+  h1 {
+    margin: 30px;
+    font-weight: bold;
+    font-size: 60px;
+  }
+
+  .grid {
+    margin: 30px auto;
+    border: 5px solid black;
+    width: 300px;
+    background: url(cat.jpg) no-repeat center;
+    background-size: cover;
+  }
+
+  .grid > li {
+    float: left;
+    display: block;
+    width: 90px;
+    height: 90px;
+    border: 5px solid black;
+    background: gray;
+    cursor: pointer;
+  }
+
+  .grid > li:hover {
+    background: yellow;
+  }
+
+  .grid > li.cleared {
+    background: transparent;
+  }
+
+  .grid > li.cleared:hover {
+    background: red;
+  }
+
+  </style>
+</head>
+<body>
+
+  <h1>Cat Click!</h1>
+
+  <button>Make difficult!</button>
+
+  <ul class="grid group">
+
+    <li></li>
+    <li></li>
+    <li></li>
+
+    <li></li>
+    <li></li>
+    <li></li>
+
+    <li></li>
+    <li></li>
+    <li></li>
+
+  </ul>
+
+  <script src="jquery.js"></script>
+  <script>
+
+  // Always wait until DOM is fully parsed and ready to go.
+  $(document).ready(function(){
+
+    $(".grid").on("click", "li", function(event){
+
+      // The event object that gets passed in.
+      console.log("event -->", event)
+
+      // The element that matches the selector on which the event was fired.
+      console.log("event.currentTarget -->", event.currentTarget)
+
+      // jQuery is nice and binds your callback's `this` to event.currentTarget.
+      console.log("this -->", this)
+      console.log("this == event.currentTarget -->", this == event.currentTarget)
+
+      // We wrap `this` in $() jQuery to be able to call jQuery methods on it. The convention is to start a variable name with a $ to signal that you're dealing with a jQuery wrapped DOM object.
+      var $li = $(this);
+
+      // Prefer toggling classes instead of adding inline styles. All styling should be pushed to stylesheets.
+      $li.toggleClass("cleared");
+
+      // Log the index of clicked element relative to its siblings.
+      console.log("Index of clicked element", $li.index());
+
+    });
+
+  });
+
+
+  // Add more li tags after the fact to see if the clicks also register on them.
+  $("button").on("click", function(event){
+    $(".grid").append("\<li>\</li>\<li>\</li>\<li>\</li>");
+  });
+
+
+  // See how the click event on the li eventually bubbles up to the body element.
+  $("body").on("click", function(event){
+    console.log("The body caught the event", event);
+  });
+
+  </script>
+
+</body>
+</html>

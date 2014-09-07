@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Box Model</title>
+  <style>
+
+  html, body, article, p, strong {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  article {
+    /* Block element. */
+    display: block;
+    background: red;
+
+    /* Understand the box-model */
+    width: 200px;
+    padding: 20px;
+    border: 5px solid green;
+    margin: 300px auto 300px auto;
+
+    /* See what happens when you uncomment the following line. */
+    /* height: 200px; */
+    /* The content will flow out... */
+    /* We generally prefer boxes to grow as the content fits. */
+  }
+
+  strong {
+    /* Inline element */
+    display: inline;
+    background: yellow;
+
+    /* See what happens when you uncomment the following lines. */
+    /* width: 200px; */
+    /* height: 200px; */
+    /* padding: 20px; */
+    /* border: 5px solid blue;*/
+    /* margin: 50px; */
+
+    /* Avoid margin/padding/width/height on inline. */
+  }
+
+  </style>
+</head>
+<body>
+
+  <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</article>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <strong>laboris nisi</strong> ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+</body>
+</html>

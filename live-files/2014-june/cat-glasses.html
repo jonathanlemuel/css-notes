@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+  html, body, h1, p, figure, figcaption, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  body {
+    font-family: sans-serif;
+  }
+
+  h1 {
+    margin: 15px;
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+  }
+
+  p {
+    margin: 15px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  figure {
+    position: relative;
+    margin: 30px auto;
+    border: 10px solid black;
+    width: 500px;
+  }
+
+  figcaption {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: green;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    z-index: 2;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .img-cat {
+/*    position: relative;
+*/    display: block;
+    z-index: 1;
+  }
+
+  .img-glasses {
+    display: block;
+    position: absolute;
+    top: 190px;
+    left: 80px;
+    width: 400px;
+    -webkit-transform: rotate(-15deg);
+    z-index: 3;
+  }
+
+  figure:hover .img-glasses {
+    display: block;
+  }
+
+  /*
+
+  .tag {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    display: block;
+    width: 200px;
+    height: 200px;
+    border: 10px solid white;
+    z-index: 1000;
+  }
+
+  .tag span {
+    display: block;
+    position: absolute;
+    left: 50px;
+    top: 230px;
+    background: black;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+  }
+
+  */
+
+
+  </style>
+</head>
+<body>
+
+<h1>Positioning</h1>
+
+<p>Hover over the cat to see something amazing!</p>
+
+<figure>
+
+  <figcaption>This is a happy cat</figcaption>
+
+  <img src="glasses.png" alt="Glasses" class="img-glasses">
+  <img src="cat.jpg" alt="Cat" class="img-cat">
+
+  <!--
+  <div class="tag">
+    <span>Sennacy</span>
+  </div>
+  -->
+
+</figure>
+
+</body>
+</html>

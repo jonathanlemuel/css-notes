@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+  html, body, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  ul {
+    margin: 200px auto;
+    list-style: none;
+    width: 330px;
+    border: 5px solid red;
+    background: url("cat.jpg");
+    background-size: cover;
+  }
+
+  li {
+    height: 100px;
+    width: 100px;
+    background: yellow;
+    border: 5px solid red;
+    float: left;
+  }
+
+  li:hover {
+    background: transparent;
+  }
+
+  .group:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  </style>
+</head>
+<body>
+
+<ul class="group">
+  <li></li>
+  <li></li>
+  <li></li>
+
+  <li></li>
+  <li></li>
+  <li></li>
+
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+
+</body>
+</html>

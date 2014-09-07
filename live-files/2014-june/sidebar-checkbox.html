@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sidebar</title>
+  <style>
+
+  html, body, nav, main, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  html, body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    font-family: sans-serif;
+    position: relative;
+  }
+
+  /* MEAT */
+
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background: blue;
+    color: white;
+    overflow: auto;
+  }
+
+  .push {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: yellow;
+    box-shadow: -10px 0 20px rgba(0,0,0,0.3);
+    transition: left 0.5s;
+  }
+
+  /*.push:after {
+    content: "";
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }*/
+
+  .open-menu > .push,
+  .sidebar:hover + .push,
+  #button:checked + .push {
+    left: 200px;
+  }
+
+  /*.open-menu > .push:after,
+  .sidebar:hover + .push:after,
+  #button:checked + .push:after {
+    display: block;
+  }*/
+
+  .main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .open-menu .main {
+    overflow: hidden;
+  }
+
+  /* FLAIR */
+
+  h1 {
+    padding: 10px;
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  li {
+    padding: 10px;
+  }
+
+  p {
+    padding: 10px;
+  }
+
+  button {
+    position: fixed;
+  }
+
+  #button {
+    position: absolute;
+    left: -9999px;
+  }
+
+  label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: block;
+    background: red;
+    z-index: 1000;
+  }
+
+  #button:checked + .push > label {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    overflow: hidden;
+    background: transparent;
+  }
+
+  </style>
+</head>
+<body>
+
+  <nav class="sidebar">
+    <h1>Nav</h1>
+    <ul>
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+    </ul>
+  </nav>
+
+  <input type="checkbox" id="button">
+
+  <div class="push">
+
+    <label for="button">Click</label>
+
+    <main class="main">
+
+      <h1>Main</h1>
+      <p>
+  Federal holidays in the United States
+  From Wikipedia, the free encyclopedia
+
+  This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (February 2010)
+  In the United States, a federal holiday is an authorized holiday which has been recognized by the US government. Every year on a US federal holiday, non-essential federal government offices are closed, and every federal employee is paid for the holiday. Private-sector employees required to work on a legal holiday may receive holiday pay in addition to their ordinary wages.
+  Federal holidays are designated by the United States Congress in Title V of the United States Code (5 U.S.C. § 6103).[1] Congress has authority to create holidays only for federal institutions (including federally owned properties) and employees, and for the District of Columbia. However, as a general rule other institutions, including banks, post offices, and schools, may be closed on those days. In various parts of the country, state and city holidays may be observed in addition to the federal holidays.
+  Contents  [hide]
+  1 List of Federal Holidays
+  1.1 Former federal holidays
+  2 Legal holidays due to presidential proclamation
+  3 Controversy, criticism, and social views
+  3.1 Columbus Day
+  3.2 Proposed federal holidays
+  4 See also
+  5 References
+  6 External links
+  List of Federal Holidays[edit]
+  Most of the eleven U.S. federal holidays are also state holidays. A holiday that falls on a weekend is usually observed on the closest weekday.[2] The official names came from the laws that define holidays for federal employees.
+  Date  Official Name  Remarks
+  January 1  New Year's Day  Celebrates beginning of the Gregorian calendar year. Festivities usually start the previous evening.
+  Third Monday of January  Martin Luther King, Jr. Day  Martin Luther King, Jr., civil rights leader, was actually born on January 15, 1929. Renamed or combined with other holidays in some states.[citation needed]
+  January 20 (every 4th year) (or the 21st if the 20th is a Sunday)  Inauguration Day  Inauguration of President of the United States and other elected federal officials. Observed only by federal employees who work in Washington, D.C., Montgomery or Prince George's counties in Maryland, or Arlington or Fairfax counties or the cities of Alexandria or Falls Church in Virginia. When this observance is the same day as the Birthday of Martin Luther King, Jr. holiday, employees who normally receive a holiday for Inauguration Day are not entitled to an in-lieu-of holiday.[3]
+  Third Monday of February  Washington's Birthday  Honors George Washington. Sometimes labeled as "Presidents Day" by other than the federal government, in recognition of other American presidents, such as Abraham Lincoln (who was born February 12). The legal name of the federal holiday, however, remains "Washington's Birthday". It was historically observed on February 22, prior to passage of the Uniform Monday Holiday Act by Congress.
+  Last Monday of May  Memorial Day  Also known as "Decoration Day", Memorial Day originated in the 19th century as a day to remember the soldiers who gave their lives in the American Civil War by decorating their graves with flowers. As the end of May coincides (in many areas) with the end of the school year, Memorial Day is unofficially considered the beginning of the summer recreational season in America. It was historically observed on May 30, prior to the Uniform Monday Holiday Act.
+  July 4  Independence Day  Celebrates the adoption of the Declaration of Independence. Also popularly known as the "Fourth of July".
+  First Monday of September  Labor Day  Celebrates achievements of workers and the labor movement. As Labor Day coincides (in many areas) with the beginning of the school year, Labor Day is unofficially considered the end of the summer recreational season in America.
+  Second Monday of October  Columbus Day  Marks the arrival of Christopher Columbus in the Americas, when he landed in the Bahamas on October 12, 1492 (according to the Julian calendar). Celebrated since 1792 in New York City.[citation needed] Congress and President Franklin Delano Roosevelt set aside Columbus Day in 1934 as a federal holiday at the behest of the Knights of Columbus.[citation needed] Historically observed on October 12, prior to the Uniform Monday Holiday Act.
+  November 11  Veterans Day  Also known as Armistice Day, and (although rarely in the U.S.) occasionally called "Remembrance Day", Veterans Day is the American name for the international holiday which commemorates the signing of the Armistice ending World War I. In the United States, the holiday honors all veterans of the United States Armed Forces, whether or not they have served in a conflict; but it especially honors the surviving veterans of wars.[citation needed] The American holiday was briefly moved to the fourth Monday in October under the Uniform Monday Holiday Act, but the change was greatly disliked and soundly criticized – among other reasons, because it put Veterans Day out of sync with international observance; so it was restored to November 11.[citation needed]
+  Fourth Thursday of November  Thanksgiving  Many Americans have a turkey dinner in honor of the dinner shared by Native Americans and the Pilgrims at Plymouth. Historically, Thanksgiving was observed on various days, although by 1863 it was observed on the last Thursday of November. In 1939, President Franklin D. Roosevelt changed it to the third Thursday of November (known as Roosevelt Thanksgiving), at the request of numerous powerful American merchants, but by Act of Congress was changed back again. (Many Americans also receive the Friday following Thanksgiving Day off work, and so many people begin their Christmas shopping on that Friday. However, the Friday following Thanksgiving is not a federal holiday.)
+  December 25  Christmas Day  A worldwide holiday that celebrates the birth of Jesus Christ. Popular aspects of the holiday include decorations, emphasis on family togetherness, and gift giving. Designated a federal holiday by Congress and President Ulysses S. Grant in 1870 (16 Stat. 168), however this only applied to federal employees in Washington D.C. The holiday did not apply to all federal employees until 1968 [4] (Pub.L. 90–363, 82 Stat. 250-251).[5]
+  New Year's Day, Independence Day, Veterans Day, and Christmas are observed on the same calendar date each year. Holidays that fall on a Saturday are observed by federal employees who work a standard Monday to Friday week on the previous Friday. Federal employees who work on Saturday will observe the holiday on Saturday; Friday will be a regular work day. Holidays that fall on a Sunday are observed by federal workers the following Monday. The other holidays always fall on a particular day of the week.[6]
+  Although many states recognize most or all federal holidays as state holidays, Federal law cannot compel them to do so. Furthermore, states can recognize other days as state holidays. As an example, the State of Texas recognizes all federal holidays except Columbus Day, and in addition recognizes the Friday after Thanksgiving, Christmas Eve, and the day after Christmas as state holidays.[7] Furthermore, Texas does not follow the federal rule of closing either the Friday before if a holiday falls on a Saturday, or the Monday after if a holiday falls on a Sunday (offices are open on those Fridays or Mondays), but does have "partial staffing holidays" (such as March 2, which is Texas Independence Day) and "optional holidays" (such as Good Friday).[8]
+  Private employers also cannot be required to observe federal or state holidays, the key exception being federally-chartered banks. Some private employers, often by a union contract, pay a differential such as time-and-a-half or double-time to employees who work on some federal holidays. However, most non-unionized private sector employees only receive their standard pay for working on a federal holiday if it is not a designated holiday at their company.[citation needed]
+  Former federal holidays[edit]
+  Main article: Victory Day (United States)
+  In 1975, Victory Day, also called "VJ Day" and "Victory over Japan Day" was abolished after being in place since 1948. According to this article and other sources, some claim the holiday to be "racist" and generally encourages "hate" against Japanese Americans, and for that matter, other races from Asia. Also, the fact that an atomic bomb was used to end the war with Japan is also cause for its abolition. Today, only the U.S. state of Rhode Island still officially observes this day with public offices and schools being closed.[9]
+  Legal holidays due to presidential proclamation[edit]
+  Main article: List of observances in the United States by presidential proclamation
+  Federal law also provides for the declaration of other public holidays by the President of the United States. Generally the president will provide a reasoning behind the elevation of the day, and call on the people of the United States to observe the day "with appropriate ceremonies and activities." Examples of Presidentially-declared holidays were the days of the funerals for former Presidents Ronald Reagan and Gerald Ford; federal government offices were closed and employees given a paid holiday.
+  Controversy, criticism, and social views[edit]
+  Some people have objected to honoring Martin Luther King, Jr. and Christopher Columbus with holidays. In particular, Senator Jesse Helms of North Carolina opposed the creation of Martin Luther King Day.[10]
+  Columbus Day[edit]
+  Main article: Columbus Day
+  Wide protests by the Native American community as well as some Italian Americans support the abolition of Columbus Day, mainly due to its ideology in "forcefully" conquering and converting whole populations with another and encouraging "imperialism" and "colonization.[11] Glenn Morris of the Denver Post wrote that Columbus Day "... is not merely a celebration of Columbus the man; it is the celebration of a racist legal and political legacy - embedded in official legal and political pronouncements of the U.S. - such as the Doctrine of Discovery and Manifest Destiny." [12]
+  Proposed federal holidays[edit]
+  Many proposed federal holidays have come up over time. According to an article from CBS, federal holidays are generally "expensive" and they only allow federal workers to take the day off. As the U.S. federal government is a large employer, the holidays are expensive. If a holiday is controversial, opposition will generally cause bills that propose such holidays to die. Martin Luther King Jr.'s birthday, for example, was one that took much effort to pass. And once it did pass, it took more effort for all states to eventually recognize it.[13]
+  The following list is an example of holidays that have been proposed and have reasons why they are not observed at the federal level today. Some of these holidays are observed at the state level.
+  Date  Official Name  Remarks
+  Third Monday of February  Susan B. Anthony Day  The holiday was proposed by Carolyn Maloney in a H. R. 655 on February 11, 2011.[14]
+  Last Monday of March  Cesar Chavez Day  The holiday was proposed California Democrat Joe Baca in H.R. 76 and was further endorsed by President Barack Obama[15]
+  Third Monday of May  Malcolm X Day  The holiday was proposed in H.R. 323 in 1993 and 1994 by Congressman Charles Rangel.[16]
+  June 14  Flag Day  Proposed several times, but only to become a national observance when President Harry Truman signed it into law as such.[17]
+  Third Monday of September  Native Americans' Day  The holiday was petitioned for multiple times and was introduced into Congress multiple time, but was unsuccessful. The proclamation exists today as the "Native American Awareness Week."[18]
+  First Tuesday of November  Election Day  There have been multiple movements for this holiday to be official, with the last happening in with the "1993 Motor Voter Act", mainly to boost voter turnout.[19]
+  See also[edit]
+  Portal icon  Holidays portal
+  List of observances in the United States by presidential proclamation
+  Public holidays in the United States
+  References[edit]
+  Jump up ^ "Cornell University Law School: US Code Collection. 6103". Law.cornell.edu. Retrieved February 5, 2013.
+  Jump up ^ "2010 Federal Holidays". Opm.gov. Retrieved February 5, 2013.
+  Jump up ^ "Federal Holidays". Opm.gov. Retrieved February 5, 2013.
+  Jump up ^ http://www.gpo.gov/fdsys/pkg/STATUTE-82/pdf/STATUTE-82-Pg250-3.pdf
+  Jump up ^ Stathis, Stephen. "Federal Holidays: Evolution and Application". CRS Report for Congress. Retrieved May 9, 2013.
+  Jump up ^ Federal Holidays Calendars from the U.S. Office of Personnel Management.
+  Jump up ^ https://www.tsl.texas.gov/ref/abouttx/holidays.html
+  Jump up ^ https://www.tsl.texas.gov/ref/abouttx/holidays.html
+  Jump up ^ "Where they still celebrate Victory over Japan".
+  Jump up ^ Church, George (October 31, 1983). "A National Holiday for King". Time (Time Inc). Retrieved January 21, 2013.
+  Jump up ^ Cristogianni Borsella. "On Persecution, Identity, and Activism".
+  Jump up ^ "Abolish Columbus Day".
+  Jump up ^ "What does it take for a federal holiday".
+  Jump up ^ "H.R. 655 - Susan B. Anthony Birthday Act".
+  Jump up ^ "Barack Obama calls for National Holiday for Cesar E. Chavez".
+  Jump up ^ "H.J.RES.323".
+  Jump up ^ "National Flag Day".
+  Jump up ^ "A History of National Native American Heritage Month: The Nation’s Efforts to Honor American Indians and Alaska Natives".
+  Jump up ^ "Should Election Day be a Holiday?".
+  External links[edit]
+  Federal Holidays: Evolution and Application, CRS Report for Congress, 98-301 GOV, updated February 8, 1999, by Stephen W. Stathis
+  Northern District of California Court Information
+  United States Code: Federal Holidays (5 USC 6103)
+  Department of Commerce Federal Holiday Calendar
+  Time.com
+  Official US Federal Holiday calendar
+  [hide] v t e
+  United States Federal holidays in the United States
+  Current
+  New Year's Day Inauguration Day Martin Luther King, Jr. Day Washington's Birthday Memorial Day Independence Day Labor Day Columbus Day Veterans Day Thanksgiving Day Christmas Day
+  Former
+  Victory Day (1948-1975)
+  Proposed
+  Flag Day (1950) Election Day (1993) Malcolm X Day (1993-1994) Cesar Chavez Day (2008) Susan B. Anthony Day (2011) Native American Day (2013)
+  Categories: Public holidays in the United StatesGovernment of the United States
+  Navigation menu
+  Create accountLog inArticleTalkReadEditView history
+
+  Main page
+  Contents
+  Featured content
+  Current events
+  Random article
+  Donate to Wikipedia
+  Wikimedia Shop
+  Interaction
+  Help
+  About Wikipedia
+  Community portal
+  Recent changes
+  Contact page
+  Tools
+  What links here
+  Related changes
+  Upload file
+  Special pages
+  Permanent link
+  Page information
+  Data item
+  Cite this page
+  Print/export
+  Create a book
+  Download as PDF
+  Printable version
+  Languages
+  Deutsch
+  Edit links
+  This page was last modified on 3 June 2014 at 03:06.
+  Text is available under the Creative Commons Attribution-ShareAlike License; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+  Privacy policyAbout WikipediaDisclaimersContact WikipediaDevelopersMobile viewWikimedia Foundation Powered by MediaWiki</p>
+
+    </main>
+  </div>
+
+  <script src="jquery.js"></script>
+  <script>
+  // $(document).ready(function(){
+//
+//     $("button").on("click", function(event){
+//       $("body").toggleClass("open-menu");
+//     });
+//
+//     $(".push").on("click", function(event){
+//       if($(event.target).is(".push")){
+//         $("body").removeClass("open-menu");
+//       }
+//     });
+//
+//   });
+  </script>
+</body>
+</html>

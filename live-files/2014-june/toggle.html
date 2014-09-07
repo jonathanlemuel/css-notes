@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+  html, body, section, div, strong {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  body {
+    font-family: sans-serif;
+    padding: 100px;
+    text-align: center;
+  }
+
+
+
+
+/*
+
+  .machine-on {
+    display: none;
+  }
+
+  .machine-off {
+    display: block;
+  }
+
+  .is-on > .machine-on {
+    display: block;
+  }
+
+  .is-on > .machine-off {
+    display: none;
+  }
+
+  */
+
+
+
+
+  .machine-on,
+  .is-on > .machine-off {
+    display: none;
+  }
+
+  .machine-off,
+  .is-on > .machine-on {
+    display: block;
+  }
+
+  </style>
+</head>
+<body>
+
+  <section class="machine">
+
+    <div class="machine-on">
+      <strong>Machine is ON</strong><br>
+      <button>Turn OFF</button>
+    </div>
+
+    <div class="machine-off">
+      <strong>Machine is OFF</strong><br>
+      <button>Turn ON</button>
+    </div>
+
+  </section>
+
+
+  <script src="jquery.js"></script>
+  <script>
+
+  $(document).ready(function(){
+
+    $(".machine").on("click", "button", function(event){
+
+      var $button = $(this);
+      var $div = $button.closest("div");
+      var $machine = $div.closest(".machine");
+
+      if($div.is(".machine-off")){
+        $machine.addClass("is-on");
+      } else {
+        $machine.removeClass("is-on");
+      }
+
+    });
+  });
+
+  </script>
+</body>
+</html>

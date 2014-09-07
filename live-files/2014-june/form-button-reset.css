@@ -1,0 +1,16 @@
+button,
+input[type="submit"] {
+  display: inline;
+  -webkit-appearance: none;
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  width: auto;
+  font: inherit;
+  vertical-align: baseline;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
