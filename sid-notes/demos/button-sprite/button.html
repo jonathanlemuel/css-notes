@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cats Button</title>
+<style>
+
+html, body, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  font-family: sans-serif;
+  background: #fff;
+  color: #333;
+  padding-top: 200px;
+  text-align: center;
+}
+
+ .cats-button {
+  display: inline-block;
+  width: 100px;
+  padding-top: 50px;
+  height: 0;
+  background: url("cats-button-sprite.png") no-repeat 0 0;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.cats-button:hover {
+  background-position: 0 -50px;
+}
+
+</style>
+</head>
+<body>
+
+  <button class="cats-button">CATS</button>
+
+</body>
+</html>

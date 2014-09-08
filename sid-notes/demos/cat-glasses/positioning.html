@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Positioning</title>
+  <style>
+
+  html, body, h1, figure, figcaption, p, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  figure, figcaption {
+    display: block;
+  }
+
+  body {
+    font-family: sans-serif;
+    color: black;
+    background: white;
+  }
+
+  h1 {
+    margin: 30px 0 0 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+  }
+
+  p {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  /*
+
+  We make figure here `relative`,
+  in order to scope the `absolute` positioned
+  elements to this container.
+
+  */
+
+  figure {
+    position: relative;
+    margin: 30px auto;
+    width: 500px;
+    border: 10px solid black;
+  }
+
+  figcaption {
+    position: absolute;
+    z-index: 3;
+    top: 20px;
+    left: 20px;
+    background: green;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /*
+
+  We give the cat image a `relative` position.
+  This lets us tweak its `z-index` to be behind
+  the `absolute` positioned elements.
+  It has a lower `z-index`.
+
+  */
+
+  .img-cat {
+    position: relative;
+    z-index: 1;
+  }
+
+  .img-glasses {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 190px;
+    left: 80px;
+    width: 400px;
+    -webkit-transform: rotate(-15deg);
+  }
+
+  figure:hover .img-glasses {
+    display: block;
+  }
+
+  </style>
+</head>
+<body>
+
+  <h1>Positioning!</h1>
+
+  <p>Hover over the image to see something remarkable.</p>
+
+  <figure>
+    <figcaption>This is a happy cat.</figcaption>
+
+    <img src="glasses.png" alt="" class="img-glasses">
+    <img src="cat.jpg" alt="" class="img-cat">
+  </figure>
+
+</body>
+</html>
