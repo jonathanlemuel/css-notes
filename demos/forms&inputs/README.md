@@ -148,39 +148,7 @@ have padding and borders, adding 7px on each side (300 - 7 - 7 = 286px).
 
 However, if you ever change the `form`'s width, but still want the text
 `input`s to take up 100% of the width of the `form`, then you'd have to
-remember to change their width too. Enter `box-sizing`:
-
-### `box-sizing`
-
-The `box-sizing` property specifies how the size of an element should be
-calculated. By default, the size is calculated based on the content, so, if you
-specify that a block element should have:
-
-```css
-width: 100px;
-height: 100px;
-padding: 5px;
-border: 5px;
-```
-
-then, the size of the element (100 x 100px) will be the area where the content
-is allowed. The padding and border will be outside of this, so the actual
-element will be 120 x 120px (10px on each side for padding and border). This is
-known as `box-sizing: content-box;`, and it's the default.
-
-![content-box](./content-box.png)
-
-There is, however, an option for the element to include the padding and border
-inside of its own width an height. If we set `box-sizing: border-box;`, then
-the whole element will be 100 x 100px, and the space for the content will be 90
-x 90px.
-
-![border-box](./border-box.png)
-
-Coming back to our text `input`s, we can use this property so that we
-don't have to specify a specific width on them, but just say it should
-be `width: 100%`. This will make it expand so that it expands until its
-*border* is as big as its parent.
+remember to change the `input`s' width too. Remember `box-sizing: border-box;`? You can use that here by changing the `input`'s to `border-box` and then you can just give them `width: 100%;` so their **border** expands to the size of the `form`.
 
 ## Focus, you must!
 
