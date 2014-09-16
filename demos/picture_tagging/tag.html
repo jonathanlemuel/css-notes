@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cat Tagger!</title>
+  <style>
+
+html, body, div, figure, h1 {
+  /*
+    Reset the tags on the page to prevent any
+    default browser styles.
+  */
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+h1 {
+  margin: 30px 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.photo {
+  /*
+    Very important! Set the parent of the .tag element to
+    relative to force a new coordinate system for the image.
+  */
+  position: relative;
+
+  /*
+    Margin auto for left and right margin properties align
+    it in the center.
+  */
+  margin: 30px auto;
+
+  /*
+    Style the photo container. As the coordinates of the tags
+    are relative in percentages, we only need to modify the width
+    of the container to enlarge the photo and still have all the
+    tags show up at the right place.
+  */
+  width: 600px;
+  border: 10px solid black;
+  background: #888;
+
+  /*
+    Hide any part of the children that stick out beyond the borders
+    of this .photo box. This may or may not be desired, but looks
+    good in this demo.
+  */
+  overflow: hidden;
+
+  /*
+    A crosshair is _so much_ better.
+  */
+  cursor: crosshair;
+}
+
+.photo > img {
+  /*
+    Make the image a block (rather than the default of inline)
+    to prevent line-height spacing at the bottom of the image.
+    Comment this out to see the difference.
+  */
+  display: block;
+
+  /*
+    Stretch the image to fill the parent container (.photo). The
+    height is set to auto to grow it proportionally.
+  */
+  width: 100%;
+  height: auto;
+}
+
+.tag {
+  /*
+    Hide by default.
+  */
+  display: none;
+
+  /*
+    Position it absolute, to lift it out of the regular
+    document flow. Set top/left to 0, they will be overwritten
+    by our JavaScript function.
+  */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /*
+    Regular styling, the full size will be 100 x 100.
+  */
+  width: 90px;
+  height: 90px;
+  border: 5px solid blue;
+  background: transparent;
+
+  /*
+    Put it on top. Although by default as the only absolutely
+    positioned element it should already be on top.
+  */
+  z-index: 1;
+
+  /*
+    Nudge half its height and length to account for box size,
+    as top/left position should be in the center.
+  */
+/*  margin-top: -50px;*/
+/*  margin-left: -50px;*/
+}
+
+.is-tagged > .tag {
+  display: block;
+}
+
+  </style>
+</head>
+<body>
+
+  <h1>Tag A Cat</h1>
+
+  <figure class="photo">
+    <div class="tag"></div>
+    <img src="cats.jpg" alt="Cats">
+  </figure>
+
+<script src="jquery.js"></script>
+<script>
+
+$(document).ready(function(){
+
+  $(".photo").on("click", function(event){
+
+    var $photo = $(this);
+    var $tag = $photo.find(".tag");
+
+    $photo.addClass("is-tagged");
+
+    // We want x and y in percentages relative to the
+    // top left corner of the photo.
+
+    var x = ((event.pageX - $photo.offset().left) / $photo.outerWidth()) * 100;
+    var y = ((event.pageY - $photo.offset().top) / $photo.outerHeight()) * 100;
+
+    // Set the inline style of the tag.
+    // The rest is taken care for by the css.
+
+    $tag.css({
+      "left": x + "%",
+      "top": y + "%"
+    });
+
+  });
+});
+
+</script>
+</body>
+</html>
