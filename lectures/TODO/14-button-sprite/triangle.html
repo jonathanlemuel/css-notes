@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+  html, body, div, figure, figcaption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  body {
+    font-family: sans-serif;
+    padding: 100px;
+    background: yellow;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  div {
+    display: block;
+    margin: 30px auto;
+
+    width: 0;
+    height: 0;
+    background: transparent;
+
+
+    /* REASONING */
+
+    /*
+    border-top: 20px solid blue;
+    border-bottom: 0 solid blue;
+
+    border-right: 20px solid red;
+    border-left: 20px solid red;
+    */
+
+
+    border-top: 20px solid blue;
+    border-bottom: 0 solid blue;
+
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+  }
+
+  figure {
+    position: relative;
+
+    width: 300px;
+    margin: auto;
+    border: 10px solid blue;
+    background: white;
+  }
+
+  figcaption {
+    position: absolute;
+    top: 80px;
+    left: 110px;
+
+    display: none;
+    color: white;
+    background: black;
+
+    position: absolute;
+    padding: 10px;
+
+    border-radius: 5px;
+  }
+
+  figure:hover figcaption {
+    display: block;
+  }
+
+  figcaption:after {
+    content: "";
+    display: block;
+
+    width: 0;
+    height: 0;
+    background: transparent;
+
+    border-top: 10px solid black;
+    border-bottom: 0 solid black;
+
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+
+    position: absolute;
+    bottom: -10px;
+
+    left: 50%;
+    margin-left: -10px;
+  }
+
+
+  </style>
+</head>
+<body>
+
+  <div></div>
+
+  <figure>
+    <figcaption>Happy Cat</figcaption>
+    <img src="cat.jpg" alt="Cat">
+  </figure>
+
+</body>
+</html>

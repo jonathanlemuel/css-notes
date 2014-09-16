@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+  html, body, div, span {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  body {
+    font-family: sans-serif;
+    padding: 100px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  div {
+    margin: 30px auto;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: blue;
+    color: white;
+    overflow: hidden;
+    padding: 20px;
+    border: 10px solid orange;
+  }
+
+  .content-box {
+    box-sizing: content-box;
+  }
+
+  .border-box {
+    box-sizing: border-box;
+  }
+
+  span {
+    display: block;
+    background: red;
+    width: 100px;
+    margin: 30px auto;
+  }
+
+  .size100 {
+    width: 100px;
+  }
+
+  .size160 {
+    width: 160px;
+  }
+
+  </style>
+</head>
+<body>
+
+  <span class="size100">100</span>
+
+  <span class="size160">160</span>
+
+  <div class="content-box">
+    CONTENT BOX 100
+  </div>
+
+  <div class="border-box">
+    BORDER BOX 100
+  </div>
+
+</body>
+</html>

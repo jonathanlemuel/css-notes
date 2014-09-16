@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>A Table</title>
+  <style>
+
+  html, body, h1, table, thead, tbody, tr, td, th {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  body {
+    font-family: sans-serif;
+  }
+
+  h1 {
+    margin: 30px 0;
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+  }
+
+  table {
+    margin: auto;
+    border: 5px solid #ccc;
+    width: 500px;
+    border-collapse: collapse;
+  }
+
+  tr {
+
+  }
+
+  th {
+    border: 5px solid #ccc;
+    text-align: left;
+    background: #eee;
+    font-weight: bold;
+    padding: 10px;
+  }
+
+  td {
+    padding: 10px;
+    border: 5px solid #ccc;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  tr:nth-child(even) td {
+    background: #ffc;
+  }
+
+  tr > td:nth-child(2) {
+    background: red;
+  }
+
+
+
+  </style>
+</head>
+<body>
+
+<h1>Table</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th colspan="2">Color</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Sennacy</td>
+      <td class="age">5</td>
+      <td>Brown Christi</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Rocky</td>
+      <td class="age">4</td>
+      <td>Brown</td>
+      <td>Stacy</td>
+    </tr>
+    <tr>
+      <td>Snowy</td>
+      <td class="age">13</td>
+      <td>White</td>
+      <td>Jonathan</td>
+    </tr>
+    <tr>
+      <td>Sennacy</td>
+      <td class="age">5</td>
+      <td>Brown</td>
+      <td>Christi</td>
+    </tr>
+    <tr>
+      <td>Rocky</td>
+      <td>4</td>
+      <td>Brown</td>
+      <td>Stacy</td>
+    </tr>
+    <tr>
+      <td>Snowy</td>
+      <td>13</td>
+      <td>White</td>
+      <td>Jonathan</td>
+    </tr>
+    <tr>
+      <td>Sennacy</td>
+      <td>5</td>
+      <td>Brown</td>
+      <td>Christi</td>
+    </tr>
+    <tr>
+      <td>Rocky</td>
+      <td>4</td>
+      <td>Brown</td>
+      <td>Stacy</td>
+    </tr>
+    <tr>
+      <td>Snowy</td>
+      <td>13</td>
+      <td>White</td>
+      <td>Jonathan</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
