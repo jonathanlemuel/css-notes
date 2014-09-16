@@ -104,4 +104,4 @@ Lorem ipsum dolor sit <strong>amet, consectetur</strong> adipisicing elit, sed d
 
 This produces:
 
-![Inline Block](.inline-block.png)
+![Inline Block](./inline-block.png)
