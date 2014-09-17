@@ -4,7 +4,15 @@ The display property sets how an elements should be displayed. The two most comm
 
 ## `display: none;`
 
-- Removes the element from the page. It will not be displayed at all and will not take up space on the page.
+Removes the element from the page. It will not be displayed at all and will
+not take up space on the page. Note that the element is still in the DOM,
+and viewable from the source of the page, it just isn't rendered.
+
+This produces:
+
+<br><br><br><br><br><br>
+
+That's a joke.
 
 ## `display: block;`
 
@@ -62,6 +70,28 @@ The element will expand to the full width of the parent container. It's height w
 
     ![Growing element](./growing-elements.png)
 
+### Demo
+
+Check out this [positioning demo][positioning_demo]
+([code][positioning_demo_code]). Note the use of `display: none` to hide the
+cat's glasses until the user hovers over the picture:
+
+```css
+.img-glasses {
+  display: none;
+  ...
+}
+
+figure:hover .img-glasses {
+  display: block;
+}
+```
+
+**Note:** The `display: block;` wins out on `:hover` because it's more specific than the general `.img-glasses` rule. Review this [here](./05-selector_precedence/README.md) if it's not clear.
+
+[positioning_demo]: http://appacademy.github.io/css-demos/positioning.html
+[positioning_demo_code]: https://github.com/appacademy/css-demos/blob/gh-pages/positioning.html
+
 ## `display: inline;`
 
 Meant to be used for elements that will be in-line, for example, words
@@ -85,6 +115,24 @@ margin that will push everything on its same line away.
 
     ![inline](./inline.png)
 
+### Demo
+
+Check out this [form demo][form_demo] ([code][form_demo_code]). Notice how the
+CSS sets the inputs to `display: block` to override their default `inline-block`
+behavior:
+
+```css
+.input > input {
+  display: block;
+  ...
+}
+```
+
+This gives each text input its own line, growing to the width of its container.
+
+[form_demo]: http://appacademy.github.io/css-demos/form.html
+[form_demo_code]: https://github.com/appacademy/css-demos/blob/gh-pages/form.html
+
 ## `display: inline-block;`
 
 Inline block elements are a combination of the block and inline elements (shocking!). They do remain inline, but they force elements around them to respect both horizontal and vertical space. Basically, they behave like inline elements to their neighboring elements, but behave like blocks internally.
@@ -105,3 +153,24 @@ Lorem ipsum dolor sit <strong>amet, consectetur</strong> adipisicing elit, sed d
 This produces:
 
 ![Inline Block](./inline-block.png)
+
+### Demo
+
+Check out this [centering demo][center_demo] ([code][center_demo_code]). Note
+the use of `display: inline-block` to make the `<ul>` respect its parent's
+use of `text-align: center`:
+
+```css
+header {
+  text-align: center;
+}
+
+ul {
+  display: inline-block;
+  ...
+}
+```
+
+[center_demo]: http://appacademy.github.io/css-demos/center.html
+[center_demo_code]: https://github.com/appacademy/css-demos/blob/gh-pages/center.html
+

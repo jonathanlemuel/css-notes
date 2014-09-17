@@ -53,6 +53,27 @@ As you can see, the green div is nudged from the top left (where it would
 normally be). The space where it would normally be is preserved as if it were
 still there, and it moves over the `p` of text.
 
+### Demo
+
+Check out this [form demo][form_demo] ([code][form_demo_code]). Note how the
+button becomes "depressed" when clicked by moving its relative position down by
+a few pixels:
+
+```css
+.submit > input {
+  position: relative;
+  ...
+}
+
+.submit > input:active {
+  top: 3px;
+  ...
+}
+```
+
+[form_demo]: http://appacademy.github.io/css-demos/form.html
+[form_demo_code]: https://github.com/appacademy/css-demos/blob/gh-pages/form.html
+
 
 ## `position: absolute;`
 
@@ -162,6 +183,28 @@ stupid container!", and you'd be right. This isn't the best example, but it
 shows you the theory. In real life, you'd use this when you want the `absolute`
 element to be positioned relative to it's container, not relative to something
 else on the page. We'll do a demo showing when this becomes (very) useful.
+
+### Demo
+
+Check out this [positioning demo][positioning_demo] ([code][positioning_demo_code]).
+Note how the cat's glasses are positioned absolutely to their container in order
+to render over the cat's eyes:
+
+```css
+.img-cat {
+  position: relative;
+}
+
+.img-glasses {
+  position: absolute;
+  top: 190px;
+  left: 80px;
+  width: 400px;
+}
+```
+
+[positioning_demo]: http://appacademy.github.io/css-demos/positioning.html
+[positioning_demo_code]: https://github.com/appacademy/css-demos/blob/gh-pages/positioning.html
 
 ## `position: fixed;`
 
