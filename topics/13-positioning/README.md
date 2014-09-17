@@ -1,12 +1,8 @@
-# Positioning & Document Flow
+# Positioning
 
-The document flow is how the elements appear on the page. For the most part,
-they show up one after the other in the order they appear in the HTML. As
-we've already seen, we can change this a little with floats. But what if we
-want complete control over the appearance, regarless of what the flow says?
-
-Enter the `position` property. This will give us different ways to control
-the.. um.. position of an element.
+What if we want complete control over the appearance, regarless of what
+the document flow says? Enter the `position` property. This will give us
+different ways to control the... um... position of an element.
 
 ## `position: static;`
 
