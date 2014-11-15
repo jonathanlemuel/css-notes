@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+  html, body, section, main, h1, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    color: inherit;
+    background: transparent;
+  }
+
+  html, body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    font-family: sans-serif;
+    background: red;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 60px;
+  }
+
+  .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: blue;
+  }
+
+  .container-top {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 100px;
+    background: pink;
+  }
+
+  .container-bottom {
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    width: 100%;
+    background: orange;
+  }
+
+  .container-bottom-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background: green;
+    overflow: auto;
+  }
+
+  .container-bottom-right {
+    position: absolute;
+    left: 300px;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: gray;
+    overflow: scroll;
+  }
+
+  ul {
+    list-style: none;
+    border: 5px solid blue;
+  }
+
+  li {
+    border-top: 5px solid blue;
+    padding: 30px;
+  }
+
+  li:first-child {
+    border: 0;
+  }
+
+  li:nth-child(odd) {
+    background: white;
+  }
+
+  article {
+    width: 380px;
+    height: 400px;
+    float: left;
+    background: blue;
+    border: 10px solid white;
+  }
+
+  .group {
+    width: 2000%;
+  }
+
+
+  </style>
+</head>
+<body>
+
+<main class="container">
+
+  <header class="container-top">
+    <h1>TOP</h1>
+  </header>
+
+  <section class="container-bottom">
+
+    <section class="container-bottom-left">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </section>
+
+    <section class="container-bottom-right">
+      <h1>MAIN <a href="#special">CONTENT</a></h1>
+
+      <div class="group">
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article id="special"></article>
+      </div>
+
+    </section>
+
+  </section>
+
+</main>
+
+<p>Search</p>
+
+
+</body>
+</html>

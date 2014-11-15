@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+  strong {
+    display: inline;
+    background: yellow;
+    padding: 20px;
+  }
+
+  div {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: gray;
+  }
+
+  /*
+  Z-INDEX
+  =======
+  - is just a number
+  - the higher the number, the more in front
+  - any z-index declared is higher than no declaration
+  - negative numbers are behind everything
+  */
+
+  /*
+  POSITIONING
+  ===========
+  - static
+  - relative
+  - absolute
+  - fixed
+  */
+
+  /*
+  STATIC
+  ======
+  - shows up where we expect
+  - takes up space in the document flow
+  - cannot nudge this with top/bottom/left/right
+  - no z-index
+  */
+
+  .static {
+    position: static;
+    background: orange;
+  }
+
+  /*
+  RELATIVE
+  ========
+  - shows up where we expect (in the document flow)
+  - takes up space (in the document flow)
+  - nudges relative to its original position where it should have shown up (top/left/bottom/right)
+  - after nudging, the original space is still taken
+  - relative is always in front of everything positioned static
+  - you can set z-index
+  - it creates a new coordinate system for its children that are absolute
+  */
+
+  .relative {
+    position: relative;
+    background: red;
+    left: 50px;
+    top: 50px;
+    z-index: 0;
+  }
+
+  /*
+  ABSOLUTE
+  ========
+  - shows up in document flow where it should (only by default when no top/left/bottom/right declared)
+  - does not take up space in document flow
+  - it is lifted out of document flow onto its own layer
+  - rather than nudging relatively, top/bottom/left/right are actual coordinates
+  - its coordinate is system is defined by its nearest non-statically positioned ancestor, if none, then the window/in combination with the documents
+  - it creates new coordinate system for children
+  - it obeys z-index
+  - takes up minimal width and height to accomodate content
+  */
+
+  .absolute {
+    position: absolute;
+    background: blue;
+    left: 50px;
+    top: 50px;
+  }
+
+  /*
+  FIXED
+  =====
+  - it shows up where it ought to in the document flow
+  - it then is fixed to the window coordinate system
+  - z-index applies
+  - use with great caution!!!
+  - takes up minimal width and height to accomodate content
+  */
+
+  .fixed {
+    position: fixed;
+    background: green;
+    top: 300px;
+    left: 300px;
+    z-index: 1;
+  }
+
+  </style>
+</head>
+<body>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <div class="fixed">I AM FIXED</div>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <div class="static">I AM STATIC</div>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <div class="relative">I AM RELATIVE</div>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <div class="absolute">I AM ABSOLUTE</div>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <div class="relative">
+    I AM RELATIVE
+    <div class="absolute">
+      I AM ABSOLUTE INSIDE A RELATIVE
+      <div class="absolute">I AM ABSOLUTE INSIDE A ABSOLUTE</div>
+    </div>
+  </div>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut <strong>aliquip</strong> ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+</body>
+</html>

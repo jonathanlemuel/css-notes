@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+  html, body, section, main, figure, aside {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    color: inherit;
+    background: transparent;
+  }
+
+  html, body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    padding: 100px;
+    font-family: sans-serif;
+    background: red;
+  }
+
+  main {
+    position: relative;
+    background: blue;
+    height: 400px;
+  }
+
+  section {
+    background: purple;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    right: 300px;
+    overflow: hidden;
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  aside {
+    width: 300px;
+    background: white;
+    position: absolute;
+    height: 100%;
+    right: 0;
+    opacity: 0.5;
+  }
+
+
+  </style>
+</head>
+<body>
+
+
+<main>
+  <section>
+    <img src="cats.jpg" alt="Cat">
+  </section>
+  <aside>
+   SIDEBAR
+  </aside>
+</main>
+
+
+</body>
+</html>

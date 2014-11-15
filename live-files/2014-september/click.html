@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title></title>
+  <style>
+
+  html, body, h1, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  .group:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  body {
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 60px;
+  }
+
+  ul {
+    margin: 50px auto;
+    list-style: none;
+    width: 300px;
+    border: 5px solid black;
+    background: url("cat.jpg");
+    background-size: cover;
+  }
+
+  li {
+    float: left;
+    display: block;
+    width: 90px;
+    height: 90px;
+    border: 5px solid black;
+    background: gray;
+    cursor: pointer;
+  }
+
+  li.clicked:after {
+    content: "X";
+  }
+
+  li.clicked {
+    background: transparent;
+  }
+
+  li:hover,
+  li.clicked:hover {
+    background: yellow;
+  }
+
+  </style>
+</head>
+<body>
+
+
+
+<h1>Cat Click!</h1>
+
+<ul class="group">
+
+  <li></li>
+  <li></li>
+  <li></li>
+
+  <li></li>
+  <li></li>
+  <li></li>
+
+  <li></li>
+  <li></li>
+  <li></li>
+
+</ul>
+
+<button>MAKE THIS HARDER!!!</button>
+
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function(){
+
+  // console.log("how many h1s? ", $("h1").length);
+
+
+    $("ul").on("click", "li", function(event){
+
+      // console.log("event -->", event);
+      //
+      // console.log("currentTarget --> ", event.currentTarget);
+      // console.log("this --> ", this);
+      //
+      // console.log("jQuery the element -->", $(event.currentTarget));
+
+      var $li = $(event.currentTarget);
+
+      console.log($li.index());
+
+      // EVIL!!
+      // $li.css("background", "red");
+
+      $li.toggleClass("clicked");
+      console.log("toggled $li", $li);
+
+    });
+
+
+
+
+  $("body").on("click", "button", function(event){
+
+    $("ul").append("<li></li><li></li><li></li>");
+
+    console.log(event);
+
+  });
+
+
+});
+
+
+</script>
+</body>
+</html>

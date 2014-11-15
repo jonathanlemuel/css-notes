@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>A Sprite Button</title>
+  <style>
+
+  html, body, div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  body {
+    padding: 100px;
+    font-family: sans-serif;
+  }
+
+  div {
+    width: 300px;
+    padding-top: 300px;
+    height: 0;
+    background: lightblue url(speaker-sprite.png) no-repeat 0 0;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-position 0.5s;
+  }
+
+  div:hover {
+    background-position: 0 -300px;
+  }
+
+  div:active {
+    background-position: 0 -600px;
+  }
+
+  </style>
+</head>
+<body>
+
+  <div class="speaker">Turn Volume ON</div>
+
+</body>
+</html>

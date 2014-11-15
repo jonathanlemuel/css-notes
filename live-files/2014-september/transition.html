@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+  html, body, figure, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  body {
+    font-family: sans-serif;
+  }
+
+  figure {
+    position: relative;
+    width: 200px;
+    height: 60px;
+    border: 10px solid black;
+    margin: 50px auto;
+    background: green;
+    overflow: hidden;
+  }
+
+  ul {
+    width: 400%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    transition: left 1s;
+  }
+
+  figure > ul:hover {
+    left: -300%;
+  }
+
+  li {
+    float: left;
+    width: 25%;
+    height: 100%;
+    color: white;
+    background: blue;
+    text-align: center;
+    line-height: 60px;
+  }
+
+  li:nth-child(even) {
+    background: red;
+  }
+
+  a {
+    color: blue;
+    transition: color 2s;
+  }
+
+  a:hover {
+    color: red;
+  }
+
+  </style>
+</head>
+<body>
+
+  <a href="#">Go to google.com (very slow transition animation... bad)</a>
+
+  <figure>
+    <ul>
+      <li>ONE</li>
+      <li>TWO</li>
+      <li>THREE</li>
+      <li>FOUR</li>
+    </ul>
+  </figure>
+
+</body>
+</html>

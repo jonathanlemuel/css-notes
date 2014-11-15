@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+  html, body, h1, figure, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  body {
+    font-family: sans-serif;
+  }
+
+  h1 {
+
+  }
+
+  figure {
+    position: relative;
+    margin: auto;
+    border: 10px solid black;
+    width: 400px;
+  }
+
+  .img-glasses {
+/*    display: none;*/
+    position: absolute;
+    width: 300px;
+    top: 150px;
+    left: 80px;
+    -webkit-transform: rotate(-15deg);
+    z-index: 10;
+  }
+
+  .img-glasses {
+    display: block;
+  }
+
+  .img-glasses:hover {
+    background: red;
+  }
+
+  .img-cat {
+    display: block;
+/*    display: none;*/
+    opacity: 0;
+  }
+
+  .img-glasses:hover + .img-cat {
+/*    display: block;*/
+/*    opacity: 1.0;*/
+  }
+
+  strong {
+    position: relative;
+    margin: auto;
+    display: block;
+    width: 100px;
+    background: pink;
+  }
+
+  strong > a {
+    display: block;
+    padding: 20px;
+  }
+
+  strong > a:hover {
+    background: blue;
+  }
+
+  div {
+    display: none;
+/*    top: 50px;
+*/    left: 0;
+/*    position: absolute;*/
+    background: red;
+    padding: 20px;
+  }
+
+  strong:hover > div {
+    display: block;
+  }
+
+  </style>
+</head>
+<body>
+
+  <strong>
+    <a href="#">Dropdown</a>
+    <div>I AM A DROPDOWN</div>
+  </strong>
+
+
+
+  <h1>An Amazing Cat</h1>
+
+  <figure>
+    <img src="glasses.png" alt="Glasses" class="img-glasses">
+    <img src="cat.jpg" alt="Cat" class="img-cat">
+  </figure>
+</body>
+</html>

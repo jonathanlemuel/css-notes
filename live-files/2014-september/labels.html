@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    color: inherit;
+    background: transparent;
+  }
+
+  body {
+    padding: 100px;
+    font-family: sans-serif;
+  }
+
+
+  .input {
+    position: relative;
+    background: yellow;
+    width: 300px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  input {
+    position: absolute;
+    left: -100px;
+    top: 0;
+  }
+
+/*  .input input:checked {
+    -webkit-appearance: none;
+    border: 10px solid red;
+  }*/
+
+  label {
+    position: relative;
+    display: block;
+    padding-top: 40px;
+    height: 0;
+    width: 100px;
+    background: gray;
+    cursor: pointer;
+  }
+
+  label:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    color: white;
+    background: white;
+    transition: left 1s;
+  }
+
+  input:checked + label:after {
+    left: 70px;
+  }
+
+  </style>
+</head>
+<body>
+
+  <form>
+    <div class="input">
+      <input type="checkbox" id="c">
+      <label for="c">Click me</label>
+    </div>
+  </form>
+
+  <div>
+    <strong>Select</strong>
+    <input type="hidden" value="1">
+    <ul>
+      <li data-value="1">Option 1</li>
+      <li>Option 1</li>
+      <li>Option 1</li>
+      <li>Option 1</li>
+    </ul>
+  </div>
+
+</body>
+</html>
