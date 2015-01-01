@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>FLOATS</title>
+  <style>
+
+  img {
+    display: block;
+    width: 300px;
+    height: 400px;
+
+    /*
+    Behold the float!
+    */
+    float: left;
+
+    /*
+    Make it see-through to see how
+    the paragraphs show up once floated.
+    Note that only their inner content
+    makes way for the floated element
+    */
+    opacity: 0.7;
+  }
+
+  p {
+    background: orange;
+  }
+
+  article {
+    margin: 30px;
+    border: 10px solid blue;
+  }
+
+  /*
+  Our first iteration of a poor man's
+  solution to keep the float
+  contained in the parent.
+  We inject our own element by hand
+  onto the page with these styles.
+  */
+  .magic-clear {
+    display: block;
+    background: red;
+    clear: both;
+  }
+
+
+
+  /* THE CLEARFIX */
+  .group:after {
+    /*
+    Put content in here to see
+    where it shows up
+    */
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+
+
+  </style>
+</head>
+<body>
+
+  <article class="group">
+
+    <h1>Cats</h1>
+
+    <img src="img/cat.jpg" alt="Cat">
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <!-- The poor man's version -->
+    <!-- <div class="magic-clear">MAGIC CLEAR</div> -->
+
+  </article>
+
+
+  <article>
+    <h1>Lasers</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </article>
+
+</body>
+</html>

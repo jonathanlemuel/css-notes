@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>RESET</title>
+  <style>
+
+  /*
+  This is the reset.
+  I declared all used tags
+  */
+
+  html, body, h1, article,
+  h2, p, strong, a {
+
+    /*
+    Box model properties of sizes
+    make no sense to inherit
+    */
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    /*
+    Note: you do not need to declare
+    a unit for zero
+    */
+
+    /*
+    Font and color styles do make
+    sense to inherit
+    */
+    font: inherit;
+    color: inherit;
+    text-align: inherit;
+    text-decoration: inherit;
+
+    /*
+    Background does not
+    Imagine a cat background image
+    Each element would have this as its own
+    Rather it makes sense to be transparent
+    */
+    background: transparent;
+  }
+
+
+  body {
+    margin: 100px;
+    padding: 20px;
+    border: 10px solid green;
+
+
+    /*
+    See how these properties get inherited
+    by the body's children
+    */
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+
+    text-align: center;
+    text-decoration: underline;
+
+    color: red;
+    background: orange;
+  }
+
+  body {
+    /*
+    Styles cascade.
+    The last declared property will
+    be the final one, given equal
+    selector precedence.
+
+    Here a 50px padding wins over a
+    padding of 0 and the padding of 30px
+    */
+    padding: 50px;
+  }
+
+  </style>
+</head>
+<body>
+
+  <h1>My Famous Articles</h1>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <article>
+    <h2>Cats</h2>
+    <p>Lorem ipsum <a href="http://google.com?q=cats">dolor</a> sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud <strong>exercitation</strong> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </article>
+
+  <article>
+    <h2>Lasers</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <strong>labore</strong> et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <strong>consequat</strong>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </article>
+
+  <article>
+    <h2>Clouds</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud <strong>exercitation</strong> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </article>
+
+
+
+</body>
+</html>
