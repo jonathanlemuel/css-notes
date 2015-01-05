@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+  html, body, header, footer, main, ul, li, nav, p, h1, a, small {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    color: inherit;
+    background: transparent;
+    text-decoration: inherit;
+    text-align: inherit;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .group:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  body {
+    font-family: sans-serif;
+    background: #eee;
+  }
+
+  .header {
+    background: #f00;
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+  }
+
+  .header-nav {
+    margin: auto;
+    width: 700px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+  }
+
+  .header-nav > h1 {
+    float: left;
+  }
+
+  .header-nav > ul {
+    float: right;
+  }
+
+  .header-nav > ul > li {
+    position: relative;
+    float: left;
+    border-left: 1px solid #000;
+  }
+
+  .header-nav a {
+    display: block;
+    padding: 10px 20px;
+  }
+
+  .header-nav a:hover {
+    background: #fff;
+    color: #f00;
+  }
+
+  .header-sub {
+    display: none;
+    left: -1px;
+    position: absolute;
+    background: #ddd;
+    border: 1px solid #000;
+    border-top: 0;
+  }
+
+  li:hover .header-sub {
+    display: block;
+  }
+
+  .header-sub li {
+    border-top: 1px solid #000;
+  }
+
+  .header-sub a {
+    color: #000;
+  }
+
+  .main {
+    margin: auto;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    background: #fff;
+    width: 660px;
+    padding: 20px;
+  }
+
+  .main-sidebar {
+    float: left;
+    width: 159px;
+    padding: 0 20px 0 0;
+    border-right: 1px solid #ccc;
+  }
+
+  .main-content {
+    float: left;
+    width: 460px;
+    padding: 0 0 0 20px;
+  }
+
+  .main h1 {
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  .main p {
+    padding: 20px 0 0 0;
+  }
+
+  .footer {
+    margin: auto;
+    width: 660px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    background: #ddd;
+  }
+
+  .footer > small {
+    display: block;
+    float: left;
+  }
+
+  .footer > ul {
+    float: right;
+  }
+
+  .footer > ul > li {
+    float: left;
+  }
+
+  .footer a {
+    display: block;
+    padding: 0 10px;
+  }
+
+
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="header-nav group">
+      <h1><a href="#">App Academy</a></h1>
+
+      <ul class="group">
+        <li><a href="#">Home</a></li>
+        <li>
+          <a href="#">Program</a>
+          <ul class="header-sub">
+            <li><a href="#">Ruby</a></li>
+            <li><a href="#">SQL</a></li>
+            <li><a href="#">Rails</a></li>
+            <li><a href="#">JS</a></li>
+            <li><a href="#">jQuery</a></li>
+            <li><a href="#">Backbone</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main group">
+    <section class="main-sidebar">
+      <h1>Sidebar</h1>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+    <section class="main-content">
+      <h1>Content</h1>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+  </main>
+
+  <footer class="footer group">
+    <small>&copy; 2014 App Academy</small>
+    <ul class="group">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Program</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

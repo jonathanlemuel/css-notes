@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+  html, body, figure, ul, li, div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    text-align: inherit;
+    text-decoration: inherit;
+    background: transparent;
+    color: inherit;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  body {
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    font-size: 60px;
+  }
+
+  figure {
+    margin: 100px auto;
+    border: 10px solid black;
+    width: 200px;
+    height: 200px;
+    background: yellow;
+
+    /*
+    We have overflow act as a our viewfinder
+    onto a part of the `<ul>`. We do this by
+    chopping the overflowing part of the `<ul>`
+    off.
+    */
+    overflow: hidden;
+  }
+
+  ul {
+    margin-top: 0;
+    width: 200px;
+    background: green;
+    -webkit-transition: margin 1s;
+  }
+
+  figure:hover ul {
+    margin-top: -1000px;
+  }
+
+  li {
+    width: 200px;
+    height: 200px;
+    background: blue;
+  }
+
+  li:nth-child(even) {
+    background: red;
+  }
+
+  </style>
+</head>
+<body>
+
+  <figure>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+    </ul>
+  </figure>
+
+
+</body>
+</html>

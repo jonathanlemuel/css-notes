@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+  html, body, form, h1, div, label {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    text-align: inherit;
+    color: inherit;
+    background: transparent;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="search"],
+  button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    text-align: inherit;
+    color: inherit;
+    background: transparent;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: sans-serif;
+    background: #ddd;
+    padding: 100px;
+  }
+
+  .sign-in {
+    background: #fff;
+    width: 300px;
+    padding: 50px;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+
+  .sign-in h1 {
+    font-weight: bold;
+    font-size: 60px;
+  }
+
+  .input {
+    margin: 20px 0;
+  }
+
+  .input label {
+    font-weight: bold;
+    display: block;
+  }
+
+  .input input {
+    border: 2px solid black;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .input input:focus {
+    border-color: #0c0;
+  }
+
+  .submit {
+  }
+
+  .submit button {
+    position: relative;
+    display: inline-block;
+    background: #0c0;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 3px 0 0 #070;
+  }
+
+  .submit button:hover {
+    background: #0b0;
+  }
+
+  .submit button:active {
+    top: 3px;
+    background: #0a0;
+    box-shadow: 0 0 0 0 #070;
+  }
+
+  </style>
+</head>
+<body>
+
+  <form class="sign-in">
+
+    <h1>Welcome</h1>
+
+    <div class="input">
+      <label for="email">Email</label>
+      <input type="text" id="email">
+    </div>
+
+    <div class="input">
+      <label for="password">Password</label>
+      <input type="password" id="password">
+    </div>
+
+    <div class="submit">
+      <button>Submit</button>
+    </div>
+
+  </form>
+
+
+</body>
+</html>

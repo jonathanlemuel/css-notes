@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>BOX MODEL</title>
+  <style>
+
+  body {
+    background: orange;
+  }
+
+
+  div {
+    display: block;
+    background: gray;
+
+    /*
+    Notice the box model properties
+    See how they add up to make
+    the element larger
+    */
+
+    width: 200px;
+    height: 200px;
+
+    /*
+    Setting a height is generally a bad
+    idea as it causes large content to
+    overflow in an undesired manner.
+    Rather leverage the default growing height
+    property of a block element.
+    */
+
+    padding: 20px;
+
+    border: 5px solid red;
+
+    /*
+    Margin is outside the element
+    and see through
+    */
+    margin: 50px;
+  }
+
+
+  article {
+    /*
+    Note that the total space between
+    the <div> and the <article> is 200px,
+    the larger of the two margins
+    */
+
+    margin: 200px;
+    background: blue;
+  }
+
+  </style>
+</head>
+<body>
+
+  <div>I AM A DIV. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita Lorem ipsum dolor sit amet, consectetur adipisicing elit,</div>
+
+  <article>ARTICLE</article>
+
+
+</body>
+</html>

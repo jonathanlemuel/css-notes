@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Overflow &amp; Positioning</title>
+  <style>
+
+  html, body, figure, figcaption, div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    text-align: inherit;
+    text-decoration: inherit;
+    background: transparent;
+    color: inherit;
+  }
+
+  body {
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+
+  figure {
+    position: relative;
+
+    margin: 200px auto;
+    width: 100px;
+    height: 100px;
+    background: blue;
+  }
+
+  figcaption {
+    position: static;
+
+    width: 100px;
+    height: 100px;
+    /*
+      THIS OVERFLOW DOES NOT WORK
+      ON POSITIONED CHILDREN AS THIS
+      ELEMENT IS STATIC ITSELF.
+    */
+    overflow: hidden;
+    background: red;
+  }
+
+  .div-absolute {
+    /*
+      I do NOT get clipped.
+    */
+    position: absolute;
+
+    top: 50px;
+    left: 50px;
+
+    width: 100px;
+    height: 100px;
+    background: yellow;
+  }
+
+  .div-static {
+    /*
+      I do get clipped.
+    */
+    position: static;
+
+    margin-top: -50px;
+    margin-left: -50px;
+
+    width: 100px;
+    height: 100px;
+    background: green;
+  }
+
+
+  </style>
+</head>
+<body>
+
+  <figure>
+
+    <figcaption>
+
+      <div class="div-absolute"></div>
+      <div class="div-static"></div>
+
+    </figcaption>
+
+  </figure>
+
+</body>
+</html>

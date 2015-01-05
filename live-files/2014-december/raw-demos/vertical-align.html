@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+
+  html, body, figure, figcaption, ul, li, div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    text-align: inherit;
+    text-decoration: inherit;
+    background: transparent;
+    color: inherit;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  body {
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+
+  figure {
+    position: relative;
+
+    margin: 50px auto;
+    background: red;
+    width: 200px;
+    height: 400px;
+  }
+
+  figcaption {
+    color: white;
+    background: blue;
+
+    width: 100px;
+    height: 100px;
+
+    position: absolute;
+
+    /* 1. use top and negative margin for half its height */
+    top: 50%;
+    margin: -50px;
+
+
+    /* 2. use top and translateY with -50% of its own height */
+    /*
+    -webkit-transform: translateY(-50%);
+    */
+
+
+    /* 3. use top with calc feature */
+    /*
+    top: calc(50% - (100px / 2));
+    */
+  }
+
+  div {
+    width: 100px;
+    height: 100px;
+    background: gray;
+  }
+
+  .div2 {
+    margin-top: -50px;
+    background: yellow;
+  }
+
+  </style>
+</head>
+<body>
+
+  <div class="div1">1</div>
+  <div class="div2">2</div>
+
+  <figure>
+
+    <figcaption>CAPTION</figcaption>
+
+  </figure>
+
+
+</body>
+</html>
